@@ -1,0 +1,103 @@
+{
+  "common.presentation.title.p1": "Find your dream job now",
+  "common.presentation.text.p1": "We have many offers waiting for you",
+  "common.presentation.title.p2": "Everything you need in a single app",
+  "common.presentation.text.p2":"Our application brings together all the essential tools to make your day easier.",
+  "common.presentation.title.p3":"Get selected for your dream job",
+  "common.presentation.text.p3":"Prepare, apply and get that position you have always dreamed of. Start your path to success!",
+  "common.presentation.title.p4":"Continue like",
+  "common.presentation.text.p4":"Choose your profile to have customized experiences and access to functions designed for you",
+  "card.job.title.option.1":"Job Seekers",
+  "card.job.text.option.1":"If you are looking for a new job opportunity, this is your option.",
+  "card.job.title.option.2":"Companies",
+  "card.job.text.option.2":"Do you represent a company? Select this option to post job offers",
+  "common.find.job":"What type of job are you looking for?",
+  "login.user.title":"Login",
+  "login.user.text":"Please log in to your registered account",
+  "login.user.forgot.password":"I forgot my password",
+  "login.user.forgot.password.text":"Please enter the email associated with your account",
+  "login.user.forgot.password.send":"Send mail",
+  "signup.account.create":"Create an account",
+  "signup.account.enterprise.create":"Continue with company information",
+  "signup.account.create.form":"Please fill out the registration form below",
+  "form.data.name":"Full name",
+  "form.data.enterprise":"Company Name",
+  "form.data.enterprise.type":"Enterprise Type",
+  "form.data.phone":"Phone",
+  "form.data.address":"Address",
+  "form.data.sector":"sector",
+  "form.data.email":"Email",
+  "form.data.password":"Password",
+  "form.data.password.verify":"Confirm password",
+  "button.data.sign":"Sign up",
+  "span.Terms.conditions":"By tapping 'Register' you agree to our",
+  "span.Terms.conditions.blur":"Terms and conditions",
+  "common.location.ask":"Where you are",
+  "common.location.select": "Select your current location",
+  "common.button.continue": "Continue",
+  "common.button.next": "Continue",
+  "common.verify.identity.title": "Verify your identity",
+  "common.verify.identity.text":"Your identity helps you discover new people and new opportunities",
+  "common.verify.identity.span":"Verify the account with your ",
+  "common.verify.otp.title":"OTP Verification",
+  "common.verify.otp.text":"Please enter the verification code",
+  "common.verify.success.title":"Your account has been created",
+  "common.verify.success.text":"Let's go get your dream job",
+  "user.account":"Account",
+  "user.knowledge.techniques":"Technical knowledge",
+  "user.studies":"Studies",
+  "user.certify":"Certifications",
+  "user.jobs":"Jobs",
+  "user.languages":"Languages",
+  "user.languages.select":"Enter your language",
+  "user.languages.ability":"Competence",
+  "user.languages.ability.option.1":"Basic",
+  "user.languages.abilityoption.2":"Intermediate",
+  "user.languages.ability.option.3":"High",
+  "user.languages.ability.option.4":"Native",
+  "user.languages.button":"Add Language",
+  "user.job.button":"Add Experience",
+  "user.study.button":"Add Study",
+  "user.soft.hability":"Soft skills",
+  "user.laboral.data":"Job data",
+  "user.laboral.data.text":"Enter your experience"
+  ,"user.common.word.company":"Company"
+  ,"user.common.word.rol":"Role played"
+  ,"user.common.word.activity":"Activities"
+  ,"user.common.word.institution":"Institution"
+  ,"user.common.word.degree":"Degree obtained"
+  ,"user.common.word.carreer":"Type of study"
+  ,"user.academic.data":"Academic Data"
+  ,"user.academic.data.text":"Enter your academic data"
+  ,"user.technical.knowledge.data":"Technical Knowledge"
+  ,"user.technical.knowledge.data.text":"Enter Technical Knowledge"
+  ,"user.common.word.morning":"good morning"
+  ,"user.common.word.search":"search"
+  ,"user.common.word.jobs":"job"
+  ,"user.common.word.recent":"Recent"
+  ,"user.common.word.recomended":"Recommended"
+  ,"user.common.word.home":"Home"
+  ,"user.common.word.interview":"Interviews"
+  ,"user.common.word.project":"Projects"
+  ,"user.common.word.applicants":"Candidates"
+  ,"user.common.word.comments":"Comments"
+  ,"user.common.word.more":"more"
+  ,"user.home.job.find":"How to find the perfect job"
+  ,"user.home.see.more":"Read more"
+  ,"user.applicants.add.project":"Add to project"
+  ,"user.applicants.add.project.tex":"The candidate has been assigned to your project"
+  ,"user.applicants.sign.test":"Register Technical Test"
+  ,"user.applicants.technical.test":"Technical test"
+  ,"user.applicants.technical.test.text":"Enter results"
+  ,"user.applicants.technical.test.qualification":"results"
+  ,"user.applicants.technical.test.technology":"Technology"
+  ,"user.applicants.technical.test.publish":"Publish"
+  ,"user.accessibility":"Accessibility"
+  ,"user.accessibility.text":"Select or adjust according to your needs"
+  ,"user.accessibility.english":"English"
+  ,"user.accessibility.spanish":"Spanish"
+  ,"user.accessibility.day":"Day"
+  ,"user.accessibility.night":"Night"
+  ,"user.accessibility.span.letter":"Increase or decrease the size of the text"
+
+ }

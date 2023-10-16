@@ -1,0 +1,104 @@
+{
+
+  "common.presentation.title.p1":"Encuentra tu trabajo soñado ahora",
+  "common.presentation.text.p1":"Tenemos muchas ofertas que esperan por ti",
+  "common.presentation.title.p2":"Todo lo que necesitas en una sola app",
+  "common.presentation.text.p2":"Nuestra aplicacion reune todas las herramientas escenciales para facilitarte el dia dia.",
+  "common.presentation.title.p3":"Sé seleccionado para el trabajo de tus sueños",
+  "common.presentation.text.p3":"Preparate, postula y consigue ese puesto que siempre has soñado. ¡Empieza tu camino hacie el éxito!",
+  "common.presentation.title.p4":"Continua como",
+  "common.presentation.text.p4":"Elige tu perfil para tener una experiencia personalizada y acceder a funciones diseñadas especificamente para ti.",
+  "card.job.title.option.1":"Buscadores de empleo",
+  "card.job.text.option.1":"Si estas buscando una nueva oportunidad laboral, esta es tu opcion.",
+  "card.job.title.option.2":"Empresas",
+  "card.job.text.option.2":"¿Representas a una compañia? Selecciona esta opcion para publicar ofertas de empleo",
+  "common.find.job":"¿Que tipo de trabajo estás buscando?",
+  "login.user.title":"Iniciar Sesión",
+  "login.user.text":"Por favor Inicia Sesión en tu cuenta registrada",
+  "login.user.forgot.password":"Olvidé mi contraseña",
+  "login.user.forgot.password.text":"Por favor ingrese el correo elctrónico asociado a su cuenta",
+  "login.user.forgot.password.send":"Enviar correo",
+  "signup.account.create":"Crear una cuenta",
+  "signup.account.enterprise.create":"Continua con la información de la empresa",
+  "signup.account.create.form":"Por favor, llena el formulario de registro a continuacion",
+  "form.data.name":"Nombre completo",
+  "form.data.enterprise":"Nombre Empresa",
+  "form.data.enterprise.type":"Tipo Empresa",
+  "form.data.phone":"Telefono",
+  "form.data.address":"Dirección",
+  "form.data.sector":"sector",
+  "form.data.email":"Correo electronico",
+  "form.data.password":"Contraseña",
+  "form.data.password.verify":"Confirmar contraseña",
+  "button.data.sign":"Registrarse",
+  "span.Terms.conditions":"Al tocar 'Registrarse' aceptas nuestros",
+  "span.Terms.conditions.blur":"Terminos y condiciones",
+  "common.location.ask":"Dónde te encuentras",
+  "common.location.select": "Selecciona tu ubicacion actual",
+  "common.button.continue": "Continuar",
+  "common.button.next": "Continuar",
+  "common.verify.identity.title": "Verifica tu identidad",
+  "common.verify.identity.text":"Tu identidad te ayuda a descubiri nuevas personas y nuevas oportunidades",
+  "common.verify.identity.span":"Veirfica la cuenta con tu ",
+  "common.verify.otp.title":"Verificación OTP",
+  "common.verify.otp.text":"Por favor, ingresa el código de verificación",
+  "common.verify.success.title":"Tu cuenta ha sido creada",
+  "common.verify.success.text":"Vamos por tu trabajo de ensueño",
+  "user.account":"Cuenta",
+  "user.knowledge.techniques":"Conocimientos técnicos",
+  "user.studies":"Estudios",
+  "user.certify":"Certificaciones",
+  "user.jobs":"Trabajos",
+  "user.languages":"Idiomas",
+  "user.languages.select":"Ingresa tu idioma",
+  "user.languages.ability":"Competencia",
+  "user.languages.ability.option.1":"Basico",
+  "user.languages.abilityoption.2":"Intermedio",
+  "user.languages.ability.option.3":"Alto",
+  "user.languages.ability.option.4":"Nativo",
+  "user.languages.button":"Agregar Idioma",
+  "user.job.button":"Agregar Experiencia",
+  "user.study.button":"Agregar Estudio",
+  "user.soft.hability":"Habilidades blandas",
+  "user.laboral.data":"Datos laborales",
+  "user.laboral.data.text":"Ingresa tu experiencia"
+  ,"user.common.word.company":"Empresa"
+  ,"user.common.word.rol":"Rol desempeñado"
+  ,"user.common.word.activity":"Actividades"
+  ,"user.common.word.institution":"Institucion"
+  ,"user.common.word.degree":"Titulo obtenido"
+  ,"user.common.word.carreer":"Tipo de estudio"
+  ,"user.academic.data":"Datos Académicos"
+  ,"user.academic.data.text":"Ingresa tus datos académicos"
+  ,"user.technical.knowledge.data":"Conocimiento Tecnico"
+  ,"user.technical.knowledge.data.text":"Ingresa Conocimiento Tecnico"
+  ,"user.common.word.morning":"good morning"
+  ,"user.common.word.search":"buscar"
+  ,"user.common.word.jobs":"trabajo"
+  ,"user.common.word.recent":"Reciente"
+  ,"user.common.word.recomended":"Recomendados"
+  ,"user.common.word.home":"Inicio"
+  ,"user.common.word.interview":"Entrevistas"
+  ,"user.common.word.project":"Proyectos"
+  ,"user.common.word.applicants":"Candidatos"
+  ,"user.common.word.comments":"Comentarios"
+  ,"user.common.word.more":"mas"
+  ,"user.home.job.find":"Como encontrar el trabajo perfecto"
+  ,"user.home.see.more":"Leer mas"
+  ,"user.applicants.add.project":"Agregar al proyecto"
+  ,"user.applicants.add.project.tex":"Se ha asignado el candidato a tu proyecto"
+  ,"user.applicants.sign.test":"Registrar Prueba tecnica"
+  ,"user.applicants.technical.test":"Prueba tecnica"
+  ,"user.applicants.technical.test.text":"Ingresa los resultados"
+  ,"user.applicants.technical.test.calification":"resultados"
+  ,"user.applicants.technical.test.technology":"Tecnologia"
+  ,"user.applicants.technical.test.publish":"Publicar"
+  ,"user.accesibility":"Accesibilidad"
+  ,"user.accesibility.text":"Selecciona o ajusta de acuerdo a tus necesidades"
+  ,"user.accesibility.english":"Ingles"
+  ,"user.accesibility.spanish":"Español"
+  ,"user.accesibility.day":"Dia"
+  ,"user.accesibility.night":"Noche"
+  ,"user.accesibility.span.letter":"Aumenta o disminuye el tamaño del texto"
+
+ }

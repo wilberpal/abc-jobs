@@ -1,0 +1,105 @@
+<ion-content>
+
+  <div class="row align-row">
+    <div class="col-3">
+      <div class="object-button" (click)="closeModal()">
+        <div class="button-back">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="title-description">
+        {{"user.applicants.technical.test" | translate}}
+      </div>
+      <div class="text-description">
+        {{"user.applicants.technical.test.text" | translate}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(prueba.name) && nombreInput.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(prueba.name) && nombreInput.touched}">
+          <ion-icon [ngClass]="{'input-error': isNombreEmpty(prueba.name) && nombreInput.touched}"
+            name="business-outline" slot="start"></ion-icon>
+          <ion-input disabled value="JojayFood" type="text" #nombreInput="ngModel" [(ngModel)]="prueba.name" autocomplete="no-autocomplete"
+            placeholder="Nombre"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(prueba.name)  && nombreInput.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input"
+          [class.input-error]="isNombreEmpty(prueba.author) && authorInput.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(prueba.author) && authorInput.touched}">
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-input disabled value="franz Joseph" type="text" #authorInput="ngModel" [(ngModel)]="prueba.author"
+            autocomplete="no-autocomplete" placeholder="Descripción"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(prueba.author)  && authorInput.touched" name="warning-outline"
+            slot="end" class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input"
+          [class.input-error]="isNombreEmpty(prueba.date) && dateInput.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(prueba.date) && dateInput.touched}">
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          <ion-input disabled value="21-08-2023" type="text" #dateInput="ngModel" [(ngModel)]="prueba.date"
+            autocomplete="no-autocomplete" placeholder="Descripción"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(prueba.date)  && dateInput.touched" name="warning-outline"
+            slot="end" class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(prueba.status) && status.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(prueba.status) && status.touched}">
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-input type="text" #status="ngModel" [(ngModel)]="prueba.status" autocomplete="no-autocomplete"
+            placeholder="Resultados"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(prueba.status)  && status.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(prueba.technology) && technologyInput.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(prueba.technology) && technologyInput.touched}">
+          <ion-icon name="time-outline" slot="start"></ion-icon>
+          <ion-select #technologyInput="ngModel" [(ngModel)]="prueba.technology" autocomplete="no-autocomplete"
+            placeholder="Tecnologia">
+            <ion-select-option value="good">Angular</ion-select-option>
+            <ion-select-option value="caution">Java</ion-select-option>
+            <ion-select-option value="bad">Excel</ion-select-option>
+          </ion-select>
+          <ion-icon *ngIf="isNombreEmpty(prueba.technology)  && technologyInput.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-input type="text" #observation="ngModel" [(ngModel)]="prueba.observation" autocomplete="no-autocomplete"
+            placeholder="Comentarios"></ion-input>
+        </ion-item>
+      </div>
+    </div>
+
+      <div class="button">
+        <button [disabled]="!camposCompletos()" (click)="createNewProject()" class="btn btn-primary">{{"publicar" |
+          uppercase}}</button>
+      </div>
+  </div>
+
+</ion-content>

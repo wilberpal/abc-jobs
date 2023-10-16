@@ -1,0 +1,150 @@
+
+<ion-content>
+  <ion-row class="row">
+    <ion-col class="col-9">
+      <ion-item>
+        <p class="text-description">
+          Buenos dias
+        </p>
+      </ion-item>
+    </ion-col>
+    <ion-col class="col-2">
+      <img [src]="picture" alt="user-picture">
+    </ion-col>
+    <ion-col class="col-12">
+      <ion-item>
+        <h2 class="title-description">
+          Nombre de usuario
+        </h2>
+      </ion-item>
+    </ion-col>
+    <ion-row class="row">
+      <ion-col class="col-12">
+        <div class="input-form">
+          <ion-item class="css-input">
+            <ion-icon name="search-sharp"></ion-icon>
+            <ion-input autocomplete="no-autocomplete" placeholder="Buscar trabajos"
+          ></ion-input>
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title
+      class="title-description-card">Como encontrar el trabajo perfecto</ion-card-title>
+    </ion-card-header>
+    <img class="imagen-lateral" alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <ion-card-content>
+        <a>Leer mas</a>
+    </ion-card-content>
+  </ion-card>
+  <ion-row>
+  <ion-col class="col-9">
+    <ion-item>
+      <h5>Trabajos recomendados</h5>
+    </ion-item>
+  </ion-col>
+  <ion-col class="col-3 boxes-col">
+    <app-box [boxNumber]="3" [step]="step"></app-box>
+  </ion-col>
+  <ion-col class="col-12">
+
+  </ion-col>
+</ion-row>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <app-job-card [title]="'Ingeniero de software'"  [text]="'Buenos Aires, Argentina'"  [option]="3"></app-job-card>
+    </div>
+    <div class="swiper-slide">
+      <app-job-card [title]="'Arquitecto de software'"  [text]="'Buenos Aires, Argentina'"  [option]="3">
+      </app-job-card>
+    </div>
+    <div class="swiper-slide">
+      <app-job-card [title]="'Desarrollo de software'"  [text]="'Buenos Aires, Argentina'"  [option]="3">
+      </app-job-card>
+    </div>
+    <!-- ... otros slides ... -->
+  </div>
+  <!-- Si deseas añadir paginación -->
+</div>
+
+<ion-row>
+  <ion-col class="col-9">
+    <ion-item>
+      <h5>Trabajos recientes</h5>
+    </ion-item>
+  </ion-col>
+  <ion-col class="col-3">
+    <h6>Mas</h6>
+  </ion-col>
+  <ion-col class="col-12">
+
+  </ion-col>
+</ion-row>
+
+
+<ion-row class="card-recent-works">
+  <ion-col class="col-3">
+    <img src="https://images.squarespace-cdn.com/content/v1/5ee24bd41556676e271feefa/1598163476754-W0J8Z93X4JV77R9A3225/Arrows2020.png?format=1500w" alt="logo Empresa">
+  </ion-col>
+  <ion-col class="col-9">
+    <a class="name-enterprise">
+      Highspeed Studios
+    </a>
+    <p style="font-weight:600; margin-top:0">Junior software developer</p>
+    <p>
+      <ion-icon name="cash-outline"></ion-icon>
+      <a>$500 - $1,000</a>
+    </p>
+    <p>
+      <ion-icon name="briefcase-outline"></ion-icon>
+      <a>Meldan, Indonesia</a>
+
+    </p>
+  </ion-col>
+</ion-row>
+<ion-row class="card-recent-works">
+  <ion-col class="col-3">
+    <img src="https://images.squarespace-cdn.com/content/v1/5ee24bd41556676e271feefa/1598163476754-W0J8Z93X4JV77R9A3225/Arrows2020.png?format=1500w" alt="logo Empresa">
+  </ion-col>
+  <ion-col class="col-9">
+    <a class="name-enterprise">
+      Highspeed Studios
+    </a>
+    <p style="font-weight:600; margin-top:0">Junior software developer</p>
+    <p>
+      <ion-icon name="cash-outline"></ion-icon>
+      <a>$500 - $1,000</a>
+    </p>
+    <p>
+      <ion-icon name="briefcase-outline"></ion-icon>
+      <a>Meldan, Indonesia</a>
+
+    </p>
+  </ion-col>
+</ion-row>
+<ion-row class="card-recent-works">
+  <ion-col class="col-3">
+    <img src="https://images.squarespace-cdn.com/content/v1/5ee24bd41556676e271feefa/1598163476754-W0J8Z93X4JV77R9A3225/Arrows2020.png?format=1500w" alt="logo Empresa">
+  </ion-col>
+  <ion-col class="col-9">
+    <a class="name-enterprise">
+      Highspeed Studios
+    </a>
+    <p style="font-weight:600; margin-top:0">Junior software developer</p>
+    <p>
+      <ion-icon name="cash-outline"></ion-icon>
+      <a>$500 - $1,000</a>
+    </p>
+    <p>
+      <ion-icon name="briefcase-outline"></ion-icon>
+      <a>Meldan, Indonesia</a>
+
+    </p>
+  </ion-col>
+</ion-row>
+</ion-content>

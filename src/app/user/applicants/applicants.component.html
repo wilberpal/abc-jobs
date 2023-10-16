@@ -1,0 +1,45 @@
+
+<ion-content>
+  <div class="row">
+    <div class="col-12">
+      <div class="title-description">
+        {{"user.common.word.applicants" | translate}}
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-icon name="search-sharp"></ion-icon>
+          <ion-input autocomplete="no-autocomplete" placeholder="Buscar" [(ngModel)]="searchInput"
+            (keyup)="filterList()"></ion-input>
+        </ion-item>
+      </div>
+    </div>
+  </div>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of filteredList">
+      <ion-item class="item-list">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="item-text"><img [src]="picture" alt="profile picture"></ion-col>
+            <ion-col class="ion-text-start col-title">{{item.author}}
+              <p>{{ item.job }}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option class="option-button" (click)="addProjectModal()">
+          {{"user.applicants.add.project" | translate}}
+        </ion-item-option>
+        <ion-item-option class="option-button" (click)="presentModal()">
+          {{"user.applicants.sign.test" | translate}}
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <app-floor-menu>
+  </app-floor-menu>
+</ion-footer>

@@ -1,0 +1,54 @@
+.input-large{
+  height: 120px;
+}
+
+.object-button {
+  display: flex;
+  margin: auto;
+  ion-icon {
+    display: flex;
+    margin: auto;
+    color: #6C6C6C;
+
+  }
+}
+
+.title-description{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.button-back{
+  margin-top: 20px;
+}
+
+.align-row{
+  margin: 10px 10px;
+}
+
+.input-form{
+  width: 85%;
+  margin:auto ;
+}
+
+.button{
+  width: 85%;
+  margin: auto;
+}
+
+.input-error {
+  --highlight-color-focused: red;
+  --highlight-color-invalid: red;
+  --highlight-height: 2px;
+  color: red;
+
+}
+.input-warning{
+  border:1px solid red !important;
+}
+
+.warning-icon {
+  color: red;
+  font-size: 1.2em;
+  margin-left: 5px;
+}

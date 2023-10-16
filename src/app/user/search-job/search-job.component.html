@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="row container">
+    <div class="col-12 center">
+      <div class="title-description">
+        {{"common.find.job" | translate}}
+      </div>
+      <div class="card-job" *ngFor="let dummie of dummy">
+        <div class="row" style="width:100%">
+          <div class="col-2">
+            <ion-icon [name]="dummie.icon" slot="start"></ion-icon>
+          </div>
+          <div class="col-6">
+            {{dummie.nombre  | titlecase}}
+          </div>
+          <div class="col-1">
+            <ion-checkbox></ion-checkbox>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button">
+    <button class="btn btn-primary" (click)="goToAccount()">{{"common.button.continue" | translate | uppercase}}</button>
+  </div>
+</ion-content>

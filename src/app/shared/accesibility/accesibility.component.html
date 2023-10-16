@@ -1,0 +1,72 @@
+<ion-content>
+  <div class="row align-row">
+    <div class="col-3">
+      <div class="object-button" (click)="closeModal()">
+        <div class="button-back">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-9">
+      <div class="title-description">
+        Accesibilidad
+      </div>
+      <div class="text-description">
+        Selecciona o ajusta de acuerdo a tus necesidades
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 center">
+      <div class="input-form">
+        <<ion-item class="css-input">
+        <img src="\assets\image\Spanish.png" *ngIf="languageChoose == 'spanish'" alt="language-English">
+        <img src="\assets\image\english.webp" *ngIf="languageChoose == 'English'" alt="language-Spanish">
+        <ion-select (change)="Chooselanguage()" #language="ngModel" [(ngModel)]="languageChoose" autocomplete="no-autocomplete"
+          placeholder="Competencia">
+          <ion-select-option value="spanish">Español</ion-select-option>
+          <ion-select-option value="English">Ingles</ion-select-option>
+        </ion-select>
+      </ion-item>
+      </div>
+    </div>
+    <ion-row>
+      <ion-col class="col-6 access" (click)="setDarkMode(true)">
+        <ion-icon name="moon-outline"></ion-icon>
+        <a>Noche</a>
+      </ion-col>
+      <ion-col class="col-6 access" (click)="setDarkMode(false)">
+        <ion-icon name="sunny-outline"></ion-icon>
+        <a>Dia</a>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="col-12 text-description access">
+        <p>
+          Aumentar o disminuir el tamaño del texto
+        </p>
+      </ion-col>
+      <ion-col class="col-2 access">
+        <a class="min">A</a>
+        <a class="max">A</a>
+      </ion-col>
+      <ion-col class="col-2 access" style="text-align: right;">
+        <a class="button-more">A</a>
+      </ion-col>
+      <ion-col class="col-4 access"  style="text-align: left;">
+        <a class="button-less">A</a>
+      </ion-col>
+    </ion-row>
+
+    <div class="button">
+      <button
+        class="btn btn-primary">{{"guardar" | uppercase}}</button>
+    </div>
+  </div>
+
+  <!--language DATA-->
+
+
+</ion-content>

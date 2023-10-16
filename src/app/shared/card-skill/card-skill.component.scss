@@ -1,0 +1,62 @@
+.card-skill{
+  width: 93px;
+  height: 138px;
+  border-radius: 30px;
+  background: #0EA6C026;
+  padding: 10px;
+
+
+}
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.title-description{
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.spinner-circle {
+  width: 100%;
+  height: 100%;
+}
+
+.spinner-background, .spinner-foreground {
+  fill: none;
+  stroke-width: 4;
+}
+
+.spinner-background {
+  stroke: #eaeaea;
+}
+
+.spinner-foreground {
+  stroke: #34db39;
+  stroke-dasharray: 88;  /* Esta es la circunferencia de un círculo con radio 14 */
+  stroke-dashoffset: 88;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+}
+
+.spinner[data-percentage] .spinner-foreground {
+  stroke-dashoffset: calc(88 * (1 - 0.6)); /* 88 * 0.4 */
+}
+
+.spinner-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+}

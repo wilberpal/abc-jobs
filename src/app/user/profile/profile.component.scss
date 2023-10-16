@@ -1,0 +1,118 @@
+.title-description{
+  text-align: center;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+
+}
+.text-description{
+  text-align: center;
+  margin: auto;
+  margin-top: 25px;
+
+}
+
+.job-description{
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #101520b0;
+}
+.image-profile{
+  img{
+    display: flex;
+    margin: auto;
+    width: 129px;
+    height: 129px;
+    border-radius: 100px;
+    border: 0px;
+  }
+}
+
+.card-file{
+  margin: auto;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+ion-item{
+  width: 68px;
+  height: 68px;
+  border-radius: 50px;
+  border: 1px solid #E2E8F0;
+  margin: auto;
+}
+
+ion-icon{
+  display: flex;
+  margin: auto;
+  margin-top: 16px;
+  color: #017DA5;
+  font-size: 34px;
+}
+
+.button-add{
+  position: absolute;
+  top:0px;
+  right:-10px;
+  border-radius: 100px;
+  button{
+    width: 40px;
+    font-size: 25px;
+    height: 40px;
+    padding: 0;
+    margin-top: 0px;
+
+
+  }
+}
+
+.section-info{
+  display: flex;
+  margin: auto;
+  padding: 20px 15px;
+  .row{
+    justify-content: space-between;
+  }
+}
+
+.container{
+  margin-bottom: 30px;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.Job-title{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  margin: 0;
+}
+.Job-place{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  margin: 0;
+}
+.Job-date{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.title-description{
+  position: relative;
+}
+
+.section-knowledge{
+  margin:15px 5px;
+  hr{
+    margin:25px 120px;
+  }
+}

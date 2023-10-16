@@ -1,0 +1,34 @@
+<ion-content class="floor-menu">
+    <ion-row>
+      <ion-col  class="section">
+        <ion-item (click)="sendToIndex()">
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-item>
+        Inicio
+      </ion-col>
+      <ion-col  class="section">
+        <ion-item>
+          <ion-icon name="id-card-outline" (click)="sendToInterview()"></ion-icon>
+        </ion-item>
+        Entrevistas
+      </ion-col>
+      <ion-col  class="section">
+        <ion-item (click)="sendToProject()">
+          <ion-icon name="rocket-outline"></ion-icon>
+        </ion-item>
+        Proyectos
+      </ion-col>
+      <ion-col  class="section">
+        <ion-item (click)="sendToApplicant()">
+          <ion-icon name="people-outline"></ion-icon>
+        </ion-item>
+        Candidatos
+      </ion-col>
+      <ion-col  class="section">
+        <ion-item (click)="sendToAccount()">
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-item>
+        Cuenta
+      </ion-col>
+    </ion-row>
+  </ion-content>

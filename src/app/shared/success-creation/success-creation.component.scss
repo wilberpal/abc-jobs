@@ -1,0 +1,42 @@
+.object-button{
+    display: flex;
+    ion-icon{
+      display: flex;
+      margin: auto;
+      color: #6C6C6C;
+      background-color: rgba(0, 0, 0, 0);
+
+    }
+  }
+
+  .centering {
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  svg{
+    display: flex;
+    margin: auto;
+  }
+
+  .title-description{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+
+
+  .button{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+
+  ion-footer{
+    position: absolute;
+    bottom: 30px;
+  }

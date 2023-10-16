@@ -1,0 +1,82 @@
+<ion-content>
+
+  <div class="row align-row">
+    <div class="col-3">
+      <div class="object-button" (click)="closeModal()">
+        <div class="button-back">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="title-description">
+        Crear proyecto
+      </div>
+      <div class="text-description">
+        Vamos a crear un proyecto para encontrar los mejores profesionales
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(proyecto.name) && nombreInput.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(proyecto.name) && nombreInput.touched}">
+          <ion-icon [ngClass]="{'input-error': isNombreEmpty(proyecto.name) && nombreInput.touched}"
+            name="folder-open-outline" slot="start"></ion-icon>
+          <ion-input type="text" #nombreInput="ngModel" [(ngModel)]="proyecto.name" autocomplete="no-autocomplete"
+            placeholder="Nombre"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(proyecto.name)  && nombreInput.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input"
+          [class.input-error]="isNombreEmpty(proyecto.shortDescription) && descripcionInput.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(proyecto.shortDescription) && descripcionInput.touched}">
+          <ion-icon name="pencil-outline" slot="start"></ion-icon>
+          <ion-input type="text" #descripcionInput="ngModel" [(ngModel)]="proyecto.shortDescription"
+            autocomplete="no-autocomplete" placeholder="Descripción"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(proyecto.shortDescription)  && descripcionInput.touched" name="warning-outline"
+            slot="end" class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(proyecto.status) && estadoInput.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(proyecto.status) && estadoInput.touched}">
+          <ion-icon name="time-outline" slot="start"></ion-icon>
+          <ion-select #estadoInput="ngModel" [(ngModel)]="proyecto.status" autocomplete="no-autocomplete"
+            placeholder="Estado">
+            <ion-select-option value="good">En proceso</ion-select-option>
+            <ion-select-option value="caution">Pausado</ion-select-option>
+            <ion-select-option value="bad">Finalizado</ion-select-option>
+          </ion-select>
+          <ion-icon *ngIf="isNombreEmpty(proyecto.status)  && estadoInput.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(proyecto.rol) && rolInput.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(proyecto.rol) && rolInput.touched}">
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-input type="text" #rolInput="ngModel" [(ngModel)]="proyecto.rol" autocomplete="no-autocomplete"
+            placeholder="Tu rol en el proyecto"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(proyecto.rol)  && rolInput.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+
+      <div class="button">
+        <button [disabled]="!camposCompletos()" (click)="createNewProject()" class="btn btn-primary">{{"publicar" |
+          uppercase}}</button>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,44 @@
+.container{
+
+  margin: auto;
+  padding: 0 20px;
+
+}
+.image-inside{
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.center{
+  display: flex;
+  margin:auto;
+  flex-direction: column;
+}
+
+.image{
+  display: flex;
+  margin:auto;
+}
+
+.title-description{
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-weight: 600;
+  size: 28px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.text-description{
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-weight: 400;
+  size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.footer{
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}

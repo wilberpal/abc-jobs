@@ -1,0 +1,38 @@
+.container{
+
+  margin: auto;
+  padding: 0 20px;
+  margin-top: 70px;
+}
+.title-description, .center-text{
+  margin: auto;
+  text-align: center!important;
+}
+
+
+
+.object-button{
+    height: 40px;
+    width: 40px;
+    ion-icon{
+      display: flex;
+      margin: auto;
+      color: #6C6C6C;
+
+    }
+  }
+
+  .ball {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    margin: auto;
+    border-radius: 50px;
+    border: 5px solid #ffff;
+  }
+
+  .text-description{
+    margin-top: 20px;
+    text-align: justify;
+    padding: 5px 20px;
+  }

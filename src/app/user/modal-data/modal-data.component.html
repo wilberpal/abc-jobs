@@ -1,0 +1,260 @@
+<ion-content>
+  <div class="row align-row">
+    <div class="col-3">
+      <div class="object-button" (click)="closeModal()">
+        <div class="button-back">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-9">
+      <div class="title-description">
+        {{title | translate}}
+      </div>
+      <div class="text-description">
+        {{description | translate}}
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="option == 1">
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(academic.institucion) && Institucion.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(academic.institucion) && Institucion.touched}">
+          <ion-icon [ngClass]="{'input-error': isNombreEmpty(academic.institucion) && Institucion.touched}"
+            name="business-outline" slot="start"></ion-icon>
+          <ion-input type="text" #Institucion="ngModel" [(ngModel)]="academic.institucion"
+            autocomplete="no-autocomplete" placeholder="Institución"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(academic.institucion)  && Institucion.touched" name="warning-outline"
+            slot="end" class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(academic.career) && degree.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(academic.career) && degree.touched}">
+          <ion-icon name="school-outline" slot="start"></ion-icon>
+          <ion-input type="text" #degree="ngModel" [(ngModel)]="academic.career" autocomplete="no-autocomplete"
+            placeholder="Titulo obtenido"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(academic.career)  && degree.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(academic.dateStart) && dateStart.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(academic.dateStart) && dateStart.touched}">
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          <ion-input type="date" #dateStart="ngModel" [(ngModel)]="academic.dateStart" autocomplete="no-autocomplete"
+            placeholder="Fecha de Inicio"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(academic.dateStart)  && dateStart.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(academic.dateEnd) && dateEnd.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(academic.dateEnd) && dateEnd.touched}">
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          <ion-input type="date" #dateEnd="ngModel" [(ngModel)]="academic.dateEnd" autocomplete="no-autocomplete"
+            placeholder="Fecha de Finalizacion"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(academic.dateEnd)  && dateEnd.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(academic.type) && type.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(academic.type) && type.touched}">
+          <ion-icon name="book-outline" slot="start"></ion-icon>
+          <ion-input type="text" #type="ngModel" [(ngModel)]="academic.type" autocomplete="no-autocomplete"
+            placeholder="Tipo de estudio"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(academic.type)  && type.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="button">
+      <button [disabled]="!camposCompletosAcademic()" (click)="createNewAcademicInformation()"
+        class="btn btn-primary">{{"Agregar
+        Estudio" |
+        uppercase}}</button>
+    </div>
+  </div>
+
+
+  <!--LABORAL DATA-->
+  <div class="row" *ngIf="option == 2">
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(laboral.enterprise) && enterprise.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(laboral.enterprise) && enterprise.touched}">
+          <ion-icon [ngClass]="{'input-error': isNombreEmpty(laboral.enterprise) && enterprise.touched}"
+            name="business-outline" slot="start"></ion-icon>
+          <ion-input type="text" #enterprise="ngModel" [(ngModel)]="laboral.enterprise" autocomplete="no-autocomplete"
+            placeholder="Empresa"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(laboral.enterprise)  && enterprise.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(laboral.role) && role.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(laboral.role) && role.touched}">
+          <ion-icon name="school-outline" slot="start"></ion-icon>
+          <ion-input type="text" #role="ngModel" [(ngModel)]="laboral.role" autocomplete="no-autocomplete"
+            placeholder="Rol desempeñado"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(laboral.role)  && role.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(laboral.dateStart) && dateStart.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(laboral.dateStart) && dateStart.touched}">
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          <ion-input type="date" #dateStart="ngModel" [(ngModel)]="laboral.dateStart" autocomplete="no-autocomplete"
+            placeholder="Fecha de Inicio"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(laboral.dateStart)  && dateStart.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(laboral.dateEnd) && dateEnd.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(laboral.dateEnd) && dateEnd.touched}">
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          <ion-input type="date" #dateEnd="ngModel" [(ngModel)]="laboral.dateEnd" autocomplete="no-autocomplete"
+            placeholder="Fecha de Finalizacion"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(laboral.dateEnd)  && dateEnd.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(laboral.activity) && activity.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(laboral.activity) && activity.touched}">
+          <ion-icon name="book-outline" slot="start"></ion-icon>
+          <ion-input type="text" #activity="ngModel" [(ngModel)]="laboral.activity" autocomplete="no-autocomplete"
+            placeholder="Actividades"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(laboral.activity)  && activity.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="button">
+      <button [disabled]="!camposCompletosLaboral()" (click)="createNewLaboralInformation()"
+        class="btn btn-primary">{{"Agregar
+        Estudio" |
+        uppercase}}</button>
+    </div>
+  </div>
+
+  <!--LABORAL DATA-->
+
+
+
+
+  <!--SKILLS DATA-->
+  <div class="row" *ngIf="option == 0">
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(knowledge.name) && knoledgeName.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(knowledge.name) && knoledgeName.touched}">
+          <ion-icon [ngClass]="{'input-error': isNombreEmpty(knowledge.name) && knoledgeName.touched}"
+            name="business-outline" slot="start"></ion-icon>
+          <ion-input type="text" #knoledgeName="ngModel" [(ngModel)]="knowledge.name"
+            autocomplete="no-autocomplete" placeholder="Conocimiento tecnico"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(knowledge.name)  && knoledgeName.touched" name="warning-outline"
+            slot="end" class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isValueEmpty(knowledge.value) && knowledgeValue.touched"
+          [ngClass]="{'input-warning': isValueEmpty(knowledge.value) && knowledgeValue.touched}">
+          <ion-icon name="school-outline" slot="start"></ion-icon>
+          <ion-input type="number" max="100" min="0" #knowledgeValue="ngModel" [(ngModel)]="knowledge.value" autocomplete="no-autocomplete"
+            placeholder="Puntuación"></ion-input>
+          <ion-icon *ngIf="isValueEmpty(knowledge.value)  && knowledgeValue.touched" name="warning-outline" slot="end"
+            class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="button">
+      <button [disabled]="!camposCompletosknowledge()" (click)="createNewknowledgeInformation()"
+        class="btn btn-primary">{{"Agregar Experiencia" | uppercase}}</button>
+    </div>
+  </div>
+
+  <!--SKILLS DATA-->
+
+
+
+  <!--language DATA-->
+  <div class="row" *ngIf="option == 3">
+    <div class="col-12 center">
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="isNombreEmpty(language.name) && languageName.touched"
+          [ngClass]="{'input-warning': isNombreEmpty(language.name) && languageName.touched}">
+          <ion-icon [ngClass]="{'input-error': isNombreEmpty(language.name) && languageName.touched}"
+            name="business-outline" slot="start"></ion-icon>
+          <ion-input type="text" #languageName="ngModel" [(ngModel)]="language.name"
+            autocomplete="no-autocomplete" placeholder="Idioma"></ion-input>
+          <ion-icon *ngIf="isNombreEmpty(language.name)  && languageName.touched" name="warning-outline"
+            slot="end" class="warning-icon"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="col-12 center">
+      <div class="input-form">
+        <<ion-item class="css-input" [class.input-error]="isNombreEmpty(language.level) && languageLevel.touched"
+        [ngClass]="{'input-warning': isNombreEmpty(language.level) && languageLevel.touched}">
+        <ion-icon name="time-outline" slot="start"></ion-icon>
+        <ion-select #languageLevel="ngModel" [(ngModel)]="language.level" autocomplete="no-autocomplete"
+          placeholder="Competencia">
+          <ion-select-option value="Basico">Basico</ion-select-option>
+          <ion-select-option value="Intermedio">Intermedio</ion-select-option>
+          <ion-select-option value="Alto">Alto</ion-select-option>
+          <ion-select-option value="Nativo">Nativo</ion-select-option>
+        </ion-select>
+        <ion-icon *ngIf="isNombreEmpty(language.level)  && languageLevel.touched" name="warning-outline" slot="end"
+          class="warning-icon"></ion-icon>
+      </ion-item>
+      </div>
+    </div>
+
+    <div class="button">
+      <button [disabled]="!camposCompletosLanguage()" (click)="createLanguageInformation()"
+        class="btn btn-primary">{{"Agregar Experiencia" | uppercase}}</button>
+    </div>
+  </div>
+
+  <!--language DATA-->
+
+
+</ion-content>

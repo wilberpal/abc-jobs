@@ -1,0 +1,49 @@
+<ion-content>
+  <div class="object-button" (click)="closeModal()">
+    <div class="button-back">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </div>
+  </div>
+  <ion-item class="col-12 centering">
+    <svg width="152" height="152" viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <mask id="mask0_1092_2215" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="152" height="152">
+      <circle cx="76" cy="76" r="76" fill="#EFF4FF"/>
+      </mask>
+      <g mask="url(#mask0_1092_2215)">
+      <g filter="url(#filter0_d_1092_2215)">
+      <ellipse cx="75.4412" cy="76.5591" rx="45.2647" ry="45.2647" fill="white"/>
+      <circle cx="31.2941" cy="32.412" r="5.58823" fill="#017DA5" fill-opacity="0.870588"/>
+      <circle cx="36.8824" cy="124.059" r="3.35294" fill="#017DA5" fill-opacity="0.870588"/>
+      <circle cx="123.5" cy="40.7941" r="3.91177" fill="#017DA5" fill-opacity="0.870588"/>
+      <circle cx="117.912" cy="129.089" r="2.79412" fill="#017DA5" fill-opacity="0.870588"/>
+      <g clip-path="url(#clip0_1092_2215)">
+      <rect x="51.4117" y="52.5298" width="48.0588" height="48.0588" rx="2" fill="white"/>
+      <path d="M61.424 76.5591L71.4363 86.5714L91.4608 66.5469" stroke="#017DA5" stroke-opacity="0.870588" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      </g>
+      </g>
+      <defs>
+      <filter id="filter0_d_1092_2215" x="2.70587" y="12.8237" width="147.706" height="151.059" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="9"/>
+      <feGaussianBlur stdDeviation="11.5"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.294118 0 0 0 0 0.333333 0 0 0 0 0.388235 0 0 0 0.14 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1092_2215"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1092_2215" result="shape"/>
+      </filter>
+      <clipPath id="clip0_1092_2215">
+      <rect x="51.4117" y="52.5298" width="48.0588" height="48.0588" rx="2" fill="white"/>
+      </clipPath>
+      </defs>
+      </svg>
+    </ion-item>
+    <h2 class="title-description">{{textModal}}</h2>
+
+    <ion-footer>
+      <div class="button">
+        <button class="btn btn-primary" (click)="closeModal()" >{{textButton}}</button>
+      </div>
+    </ion-footer>
+</ion-content>

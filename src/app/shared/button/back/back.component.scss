@@ -1,0 +1,21 @@
+.object-button{
+  display: flex;
+  margin: auto;
+}
+
+.button{
+  display: flex;
+  margin: auto;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #017DA5;
+  color: #ffff;
+  font-size: 25px;
+}
+
+ion-icon{
+  display: flex;
+  margin: auto;
+}

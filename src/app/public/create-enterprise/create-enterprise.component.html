@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="object-button" (click)="backPage()">
+    <div class="button-back">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 center">
+      <div class="title-description">
+        Empresa
+      </div>
+      <div class="text-description">
+        Continua con la información de la empresa
+      </div>
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-input autocomplete="no-autocomplete" placeholder="Nombre Empresa"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-input autocomplete="no-autocomplete" placeholder="Dirección"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-input autocomplete="no-autocomplete" placeholder="Sector"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-input autocomplete="no-autocomplete" placeholder="Tipo Empresa"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-input autocomplete="no-autocomplete" placeholder="Tu rol en la empresa"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="button">
+        <button (click)="sendToEnterprise()" class="btn btn-primary">Registrarse</button>
+      </div>
+      <div class="text-span">
+        <a >Al tocar "Registrarse", aceptas nuestros</a>
+      </div>
+      <div class="hyper" style="font-weight:900; text-decoration:none;">
+        <a >Terminos y condiciones</a>
+      </div>
+    </div>
+
+    <div class="hyper">
+      <a (click)="sendToLogin()">Iniciar sesion</a>
+  </div>
+</div>
+</div>

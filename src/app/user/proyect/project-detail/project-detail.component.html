@@ -1,0 +1,54 @@
+
+<ion-content>
+  <ion-row class="row">
+    <ion-col class="col-2">
+      <div class="object-button" (click)="backPage()">
+        <div class="button-back">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </div>
+      </div>
+    </ion-col>
+    <ion-col class="col-9">
+      <div class="title-description">
+        JoaJoyFood
+      </div>
+    </ion-col>
+    <ion-col class="col-1">
+      <a class="ball" style="background-color: #FF7F23;"></a>
+    </ion-col>
+  </ion-row>
+  <ion-row class="row">
+    <ion-col class="col-12">
+      <div class="text-description center-text">
+        Explora sabores que te haran feliz
+      </div>
+    </ion-col>
+    <ion-col class="col-12">
+      <p class="text-description">
+        Estado: Pausado
+      </p>
+      <p class="text-description hyperlink">
+        Ver candidatos
+      </p>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of filteredList">
+      <ion-item class="item-list" (click)="goToAccount()">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="item-text"><img [src]="picture" alt="profile picture"></ion-col>
+            <ion-col class="ion-text-start col-title">{{item.author}}
+              <p>{{ item.job }}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option class="option-button" (click)="performanceEvaluation()">
+          Agregar evaluacion de desempeño
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

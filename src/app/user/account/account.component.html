@@ -1,0 +1,151 @@
+<ion-content>
+  <div class="row container">
+    <div class="col-12 center">
+      <div class="title-description">
+        {{"user.account" | translate}}
+      </div>
+      <div class="image-profile">
+        <div class="row" style="width:100%">
+          <div class="col-12">
+            <img [src]="picture" alt="profile picture">
+          </div>
+          <div class="col-12">
+            <div class="title-description">
+              {{"Nombre de usuario" | titlecase}}
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="job-description">
+              Cargo del usuario
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="text-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure beatae at fugiat dicta, debitis consequuntur
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-info">
+        <div class="row" style="width:100%">
+          <div class="col-3">
+            <ion-item>
+              <ion-icon name="call"></ion-icon>
+            </ion-item>
+          </div>
+          <div class="col-3">
+            <ion-item>
+              <ion-icon name="mail"></ion-icon>
+            </ion-item>
+          </div>
+          <div class="col-3">
+            <ion-item>
+              <ion-icon name="location"></ion-icon>
+            </ion-item>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-file">
+        <app-card-file [title]="'Mi resumen'" [documentName]="'File.pdf'">
+
+        </app-card-file>
+      </div>
+      <hr>
+      <div class="card-skill">
+        <div class="title-description" style="text-align:left">
+          {{"user.knowledge.techniques" | translate}}
+        </div>
+        <div class="row" style="width:100%">
+          <div class="col-4" *ngFor="let item of items" style="margin-bottom: 20px;">
+            <app-card-skill [item]="item">
+
+            </app-card-skill>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="title-description" style="text-align:left">
+        {{"user.certify" | translate}}
+      </div>
+      <div class="section-knowledge" *ngFor="let skill of skills.certificate">
+        <p class="Job-place">
+          {{skill.academy}}
+        </p>
+        <div class="content-certificate">
+          <p class="Job-title">
+            {{skill.name}}
+
+          </p>
+          <p class="Job-date">
+            {{skill.year}}
+
+          </p>
+        </div>
+        <hr>
+      </div>
+      <hr>
+
+      <div class="title-description" style="text-align:left">
+        {{"user.jobs" | translate}}
+      </div>
+      <div class="section-knowledge" *ngFor="let skill of skills.works">
+        <div class="content-certificate">
+          <p class="Job-title">
+            {{skill.name}}
+
+          </p>
+          <p class="Job-place">
+            {{skill.academy}}
+          </p>
+          <p class="Job-date">
+            {{skill.year}}
+          </p>
+        </div>
+        <hr>
+      </div>
+      <hr>
+      <div class="title-description" style="text-align:left">
+        {{"user.languages" | translate}}
+      </div>
+      <div class="section-knowledge" *ngFor="let skill of skills.Languages">
+        <div class="content-certificate">
+          <p class="Job-title">
+            {{skill.name}}
+          </p>
+          <p class="Job-place">
+            {{skill.experience}}
+          </p>
+        </div>
+        <hr>
+      </div>
+      <hr>
+
+      <div class="title-description" style="text-align:left">
+        {{"user.soft.hability" | translate}}
+      </div>
+      <div class="section-knowledge" *ngFor="let skill of skills.softSkills">
+        <div class="content-certificate">
+          <p class="Job-title">
+            {{skill.name}}
+          </p>
+          <p class="Job-place">
+            {{skill.experience}}
+          </p>
+        </div>
+        <hr>
+      </div>
+
+      <hr>
+      <div class="button">
+        <button class="btn btn-primary">{{"user.applicants.add.project" | translate | uppercase}}</button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<div class="floor-menu">
+  <app-floor-menu>
+
+  </app-floor-menu>
+</div>

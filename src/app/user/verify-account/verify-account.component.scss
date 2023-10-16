@@ -1,0 +1,187 @@
+.title-description {
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-weight: 600;
+  line-height: 25px;
+  text-align: left;
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #101520;
+  margin-right: 40px;
+  margin-left: 70px;
+  margin-top: 15px;
+}
+button{
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.card-job {
+  display: flex;
+  width: 94%;
+  height: 70px;
+  margin: 10px;
+  border-radius: 30px;
+  box-shadow: 0px 10px 65px 0px #E6EAEE99;
+
+  div {
+    margin: auto 10px;
+  }
+
+}
+
+.input-form {
+  display: flex;
+  margin: 10px auto;
+}
+
+ion-icon {
+  font-size: 22px;
+  color: #000000;
+  background-color: #FFFF;
+}
+
+.list-country {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #121212;
+  padding: 20px 30px;
+  border-bottom: 1px solid #E4E6E8;
+}
+
+
+.object-button{
+
+  position: absolute;
+  top: 0;
+  left: 10px;
+    display: flex;
+    ion-icon{
+      display: flex;
+      margin: auto;
+      color: #6C6C6C;
+      background-color: rgba(0, 0, 0, 0);
+
+    }
+  }
+
+.button {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  margin: auto;
+}
+
+
+.p-head {
+  margin-top: 10px;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
+  font-weight: 600;
+  color: #121A26;
+}
+
+.p-body {
+  margin-top: -20px;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-size: 11px;
+  line-height: 16.5px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  color: #64748B;
+
+}
+
+.hyper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container-list {
+  max-height: 450px;
+  overflow-y: scroll;
+}
+
+.active {
+  border: 2px solid #017DA5;
+}
+
+ion-item {
+  background-color: #FFFFFF;
+}
+
+
+.css-input {
+  font-size: 16px;
+  border-width: 1px;
+  border-color: #909090;
+  background-color: #FFFFFF;
+  color: #323232;
+  border-style: solid;
+  border-radius: 40px;
+  box-shadow: -9px 0px 0px rgba(66, 66, 66, .0);
+  text-shadow: 0px 0px 2px rgba(66, 66, 66, .50);
+  display: flex;
+  margin: auto;
+  margin-top: 40px;
+  width: 95%;
+  height: 64px;
+}
+
+.css-input:focus {
+  outline: none;
+  border-color: #4640DE;
+}
+
+.otp-input {
+  flex-direction: row;
+  font-size: 30px;
+  border-width: 1px;
+  border-color: #909090;
+  background-color: #FFFFFF;
+  color: #323232;
+  border-style: solid;
+  border-radius: 20px;
+  box-shadow: -9px 0px 0px rgba(66, 66, 66, .0);
+  text-shadow: 0px 0px 2px rgba(66, 66, 66, .50);
+  display: flex;
+  margin: auto;
+  width: 85px;
+  height: 64px;
+  font-weight: 900;
+}
+
+.centering {
+  display: flex;
+  margin: auto;
+  margin-top: 50px;
+
+  svg {
+    display: flex;
+    margin: auto;
+  }
+}
+
+.input-form {
+  display: flex;
+  margin: 20px auto;
+}
+
+ion-input {
+  background-color: #FFFFFF;
+  text-decoration: none;
+  border: 0px;
+
+}
+
+.text-description{
+  margin-left: 20px;
+}
+
+ion-input:focus {
+  background-color: #FFFFFF;
+}

@@ -1,0 +1,119 @@
+.title-description {
+  text-align: center;
+}
+
+ion-list {
+  max-height: 65vh;
+  overflow-y: scroll;
+}
+
+.container{
+  margin-bottom: 10px;
+}
+
+.container-ball {
+  position: relative;
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  display: flex;
+  position: absolute;
+  top: 15px;
+  left: -60px;
+  border-radius: 50px;
+
+}
+
+.item-list {
+  height: 85px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.option-button{
+  color: white;
+  font-size: 12px;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  max-width: 87px;
+  background-color: #017DA5;
+  border-left: 2px solid #ffff;
+  text-align: center;
+}
+
+.titleName {
+  margin: 0;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 10px;
+
+
+}
+
+.text-description {
+  margin: 0;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+ion-footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.item-text{
+  width: 80px;
+  max-width: 80px;
+}
+
+img {
+  display: flex;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  border: 0px;
+  margin-top: 10px;
+}
+
+
+.title-description, .center-text{
+  margin: auto;
+  text-align: center!important;
+}
+
+
+
+.object-button{
+    height: 40px;
+    width: 40px;
+    ion-icon{
+      display: flex;
+      margin: auto;
+      color: #6C6C6C;
+
+    }
+  }
+
+.button {
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  width: 70%;
+}
+
+
+.floor-menu {
+  position: absolute;
+  bottom: 0;
+}
