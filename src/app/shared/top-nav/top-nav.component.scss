@@ -3,8 +3,21 @@ nav{
   width: 50%;
   display: flex;
   margin: auto;
+  box-shadow: none;
+  border: 0;
 }
 
+.logo{
+  position: absolute;
+  top: 7px;
+  left: 20px;
+}
+
+.logo-text{
+  position: absolute;
+  top: 18px;
+  left: 80px;
+}
 .accesibility{
   display: flex;
   margin: auto;

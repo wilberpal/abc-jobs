@@ -11,10 +11,10 @@
 
     <div class="col-9">
       <div class="title-description">
-        Accesibilidad
+        {{"user.accesibility" | translate | titlecase}}
       </div>
       <div class="text-description">
-        Selecciona o ajusta de acuerdo a tus necesidades
+        {{"user.accesibility.text" | translate}}
       </div>
     </div>
   </div>
@@ -22,12 +22,12 @@
     <div class="col-12 center">
       <div class="input-form">
         <<ion-item class="css-input">
-        <img src="\assets\image\Spanish.png" *ngIf="languageChoose == 'spanish'" alt="language-English">
-        <img src="\assets\image\english.webp" *ngIf="languageChoose == 'English'" alt="language-Spanish">
-        <ion-select (change)="Chooselanguage()" #language="ngModel" [(ngModel)]="languageChoose" autocomplete="no-autocomplete"
-          placeholder="Competencia">
-          <ion-select-option value="spanish">Español</ion-select-option>
-          <ion-select-option value="English">Ingles</ion-select-option>
+        <img src="\assets\image\Spanish.png" *ngIf="languageChoose == 'es'" alt="language-English">
+        <img src="\assets\image\english.webp" *ngIf="languageChoose == 'en'" alt="language-Spanish">
+        <ion-select (ionChange)="changeLang()" #language="ngModel" [(ngModel)]="languageChoose" autocomplete="no-autocomplete"
+          placeholder="{{'user.accesibility.form.language' | translate}}">
+          <ion-select-option value="es">{{"user.accesibility.spanish" | translate | titlecase}}</ion-select-option>
+          <ion-select-option value="en">{{"user.accesibility.english" | translate | titlecase}}</ion-select-option>
         </ion-select>
       </ion-item>
       </div>
@@ -35,17 +35,17 @@
     <ion-row>
       <ion-col class="col-6 access" (click)="setDarkMode(true)">
         <ion-icon name="moon-outline"></ion-icon>
-        <a>Noche</a>
+        <a>{{"user.accesibility.night" | translate | titlecase}}</a>
       </ion-col>
       <ion-col class="col-6 access" (click)="setDarkMode(false)">
         <ion-icon name="sunny-outline"></ion-icon>
-        <a>Dia</a>
+        <a>{{"user.accesibility.day" | translate | titlecase}}</a>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="col-12 text-description access">
         <p>
-          Aumentar o disminuir el tamaño del texto
+          {{"user.accesibility.span.letter" | translate | titlecase}}
         </p>
       </ion-col>
       <ion-col class="col-2 access">
@@ -62,7 +62,7 @@
 
     <div class="button">
       <button
-        class="btn btn-primary">{{"guardar" | uppercase}}</button>
+        class="btn btn-primary" (click)="closeModal()">{{"common.button.next" | translate}}</button>
     </div>
   </div>
 

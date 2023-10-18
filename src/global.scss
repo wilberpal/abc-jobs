@@ -38,11 +38,18 @@ body.dark {
   }
   .title-description{
     background-color: #222;
-    text-color: #ddd;
+    color: #ddd;
   }
   .text-description{
-    --ion-background-color: #222;
-    --ion-text-color: #ddd;
+    color: #ddd;
+  }
+
+  .css-input {
+    color: #ffff !important;
+  }
+
+  ion-icon{
+      color: #ddd!important;
   }
 }
 
@@ -103,11 +110,9 @@ ion-header{
   border-radius: 24px;
 }
 
-.css-input.dark {
-  color: #ffff;
-  background-color: #101520;
-  --ion-background-color: #222;
-  --ion-text-color: #ddd;
+ion-modal.custom-web{
+  --border-radius: 22px;
+  --ion-padding: 20px
 }
 
 ion-modal.custom-modal {
@@ -133,6 +138,9 @@ ion-modal.custom-modal-2 {
 ion-input.dark{
   --ion-background-color: #222;
   --ion-text-color: #ddd;
+  --ion-text-color: #ddd;
+  --ion-color: #ddd;
+  color: #ddd;
 
 
 }

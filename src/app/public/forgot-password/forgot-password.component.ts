@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-forgot-password',
@@ -8,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 
 export class ForgotPasswordComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const lang = localStorage.getItem('appLang') || 'es';
+    this.translate.use(lang);
+  }
 
   backPage() {
     window.history.back();

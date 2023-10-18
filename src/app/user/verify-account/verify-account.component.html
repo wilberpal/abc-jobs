@@ -9,7 +9,7 @@
   <div class="row" *ngIf="step==0">
     <div class="col-12 center">
       <div class="title-description">
-        Dónde te encuentras
+        {{"common.location.ask" | translate}}
       </div>
 
       <div class="card-job">
@@ -18,7 +18,7 @@
             <ion-icon name="locate"></ion-icon>
           </div>
           <div class="col-9">
-            selecciona tu ubicacion actual
+            {{"common.location.select" | translate}}
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="button">
-        <button class="btn btn-primary" (click)="next()">Continuar</button>
+        <button class="btn btn-primary" (click)="next()">{{"common.button.continue" | translate | uppercase}}</button>
       </div>
     </div>
   </div>
@@ -40,10 +40,10 @@
   <div class="row" *ngIf="step==1">
     <div class="col-12 center">
       <div class="title-description">
-        Verifica tu identidad
+        {{"common.verify.identity.title" | translate}}
       </div>
       <div class="text-description">
-        Tu identidad te ayuda a descubrir nuevas personas y nuevas oportunidades
+        {{"common.verify.identity.text" | translate}}
       </div>
 
       <div class="card-job" style="border:1px solid #E2E8F0" (click)="activeVerify('mail')"
@@ -53,8 +53,8 @@
             <ion-icon name="mail-outline"></ion-icon>
           </div>
           <div class="col-7">
-            <p class="p-head">Correo Electrónico</p>
-            <p class="p-body">Verifica la cuenta con tu correo</p>
+            <p class="p-head">{{"form.data.email" | translate | titlecase}}</p>
+            <p class="p-body">{{"common.verify.identity.span" | translate}} {{"form.data.email" | translate}}</p>
           </div>
           <div class="col-1"  *ngIf="activeMail">
             <ion-icon name="checkmark-outline"></ion-icon>
@@ -69,8 +69,8 @@
             <ion-icon name="call-outline"></ion-icon>
           </div>
           <div class="col-7">
-            <p class="p-head">Telefono</p>
-            <p class="p-body">Verifica la cuenta con tu telefono</p>
+            <p class="p-head">{{"form.data.phone" | translate}}</p>
+            <p class="p-body">{{"common.verify.identity.span" | translate}} {{"form.data.phone" | translate}}</p>
           </div>
           <div class="col-1"  *ngIf="activePhone">
             <ion-icon name="checkmark-outline"></ion-icon>
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="button">
-        <button class="btn btn-primary" (click)="next()" [disabled]="!activePhone && !activeMail">SIGUIENTE</button>
+        <button class="btn btn-primary" (click)="next()" [disabled]="!activePhone && !activeMail">{{"common.button.continue" | translate | uppercase}}</button>
       </div>
     </div>
   </div>
@@ -86,20 +86,20 @@
   <div class="row" *ngIf="step==2">
     <div class="col-12 center" *ngIf="activePhone">
       <div class="title-description">
-        Número de teléfono
+        {{"form.data.phone" | translate}}
       </div>
       <div class="text-description">
-        Tu identidad te ayuda a descubrir nuevas personas y nuevas oportunidades
+        {{"common.verify.identity.text" | translate}}
       </div>
 
       <div class="input-form">
         <ion-item class="css-input">
-          <ion-input autocomplete="no-autocomplete" placeholder="Telefono"></ion-input>
+          <ion-input autocomplete="no-autocomplete" placeholder='{{"form.data.phone" | translate}}'></ion-input>
         </ion-item>
       </div>
 
     <div class="button">
-      <button class="btn btn-primary" (click)="next()" [disabled]="!activePhone && !activeMail">SIGUIENTE</button>
+      <button class="btn btn-primary" (click)="next()" [disabled]="!activePhone && !activeMail">{{"common.button.continue" | translate | uppercase}}</button>
     </div>
   </div>
 </div>
@@ -107,20 +107,20 @@
 <div class="row" *ngIf="step==2">
   <div class="col-12 center" *ngIf="activeMail">
     <div class="title-description">
-      Correo Electronico
+      {{"form.data.email" | translate | titlecase}}
     </div>
     <div class="text-description">
-      Tu identidad te ayuda a descubrir nuevas personas y nuevas oportunidades
+      {{"common.verify.identity.text" | translate}}
     </div>
 
     <div class="input-form">
       <ion-item class="css-input">
-        <ion-input autocomplete="no-autocomplete" placeholder="Correo"></ion-input>
+        <ion-input autocomplete="no-autocomplete" placeholder='{{"form.data.email" | translate | titlecase}}'></ion-input>
       </ion-item>
     </div>
 
   <div class="button">
-    <button class="btn btn-primary" (click)="next()" [disabled]="!activePhone && !activeMail">SIGUIENTE</button>
+    <button class="btn btn-primary" (click)="next()" [disabled]="!activePhone && !activeMail">{{"common.button.continue" | translate | uppercase}}</button>
   </div>
 </div>
 </div>
@@ -129,10 +129,10 @@
 <div class="row" *ngIf="step==3">
   <div class="col-12 center">
     <div class="title-description">
-      Verificación OTP
+      {{"common.verify.otp.title" | translate}}
     </div>
     <div class="text-description">
-      Por favor, ingresa el código de verificación
+      {{"common.verify.otp.text" | translate}}
     </div>
 
     <div class="input-form">
@@ -142,7 +142,7 @@
     </div>
 
   <div class="button">
-    <button class="btn btn-primary" (click)="next()" [disabled]="!activePhone && !activeMail">SIGUIENTE</button>
+    <button class="btn btn-primary" (click)="next()" [disabled]="!activePhone && !activeMail">{{"common.button.continue" | translate | uppercase}}</button>
   </div>
 </div>
 </div>
@@ -189,8 +189,8 @@
 
 
   <div class="button">
-    <button class="btn btn-primary" (click)="sendToJobs()" >Vamos</button>
-    <button class="btn btn-primary" (click)="sendToAccount()">Proyectos</button>
+    <button class="btn btn-primary" (click)="sendToJobs()" >{{"common.verify.lets.go" | translate}}</button>
+    <button class="btn btn-primary" (click)="sendToAccount()">{{"user.common.word.project" | translate}}</button>
   </div>
 </div>
 </div>

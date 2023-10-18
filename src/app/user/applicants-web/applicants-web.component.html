@@ -1,0 +1,41 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="title-description">
+        {{"user.common.word.applicants" | translate}}
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-icon name="search-sharp"></ion-icon>
+          <ion-input autocomplete="no-autocomplete" placeholder="{{'user.common.word.search' | translate | titlecase}}" [(ngModel)]="searchInput"
+            (keyup)="filterList()"></ion-input>
+        </ion-item>
+      </div>
+    </div>
+  </div>
+  <ion-list>
+    <div class="row" *ngFor="let item of filteredList" style="margin-bottom: 10px;" >
+            <div class=" col-1 item-text"><img [src]="picture" alt="profile picture"></div>
+            <div class="col-3 ion-text-start col-title">{{item.author}}
+              <p>{{ item.job }}</p>
+            </div>
+
+        <div class="col-2 option-button" (click)="addProjectModal()">
+          {{"user.applicants.add.project" | translate | uppercase}}
+        </div>
+        <div class="col-2 option-button" (click)="presentModal()">
+          {{"user.applicants.sign.test" | translate | uppercase}}
+        </div>
+        <div class="col-2 option-button" (click)="performanceEvaluation()">
+          {{"user.add.test.performance" | translate | uppercase}}
+        </div>
+    </div>
+  </ion-list>
+</div>
+
+<div class="sidebar">
+  <app-sidebar></app-sidebar>
+</div>

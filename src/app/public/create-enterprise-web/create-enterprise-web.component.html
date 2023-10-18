@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="object-button" (click)="backPage()">
+    <div class="button-back">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 center">
+      <div class="title-description">
+        {{"user.common.word.company" | translate  | titlecase}}
+      </div>
+      <div class="text-description">
+        {{"signup.account.enterprise.create" | translate}}
+      </div>
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-input autocomplete="no-autocomplete" placeholder="{{'form.data.enterprise' | translate | titlecase}}"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-input autocomplete="no-autocomplete" placeholder="{{'form.data.address' | translate | titlecase}}"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-input autocomplete="no-autocomplete" placeholder="{{'form.data.sector' | translate | titlecase}}"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-input autocomplete="no-autocomplete" placeholder="{{'form.data.enterprise.type' | translate | titlecase}}"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-form">
+        <ion-item class="css-input">
+          <ion-input autocomplete="no-autocomplete" placeholder="{{'user.common.word.rol' | translate | titlecase}}"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="button">
+        <button (click)="sendToProjects()" class="btn btn-primary">{{"button.data.sign" | translate | titlecase}}</button>
+      </div>
+      <div class="text-span">
+        <a >{{"span.Terms.conditions" | translate | titlecase}}</a>
+      </div>
+      <div class="hyper" style="font-weight:900; text-decoration:none;">
+        <a >{{"span.Terms.conditions.blur" | translate | titlecase}}</a>
+      </div>
+    </div>
+
+    <div class="hyper">
+      <a (click)="sendToLogin()">{{"login.user.title" | translate | titlecase}}</a>
+  </div>
+</div>
+</div>

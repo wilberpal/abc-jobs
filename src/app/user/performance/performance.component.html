@@ -10,7 +10,7 @@
     </div>
     <div class="col-9">
       <div class="title-description">
-        Evaluacion de desempeño
+        {{"user.test.performance" | translate | titlecase}}
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@
           <ion-icon [ngClass]="{'input-error': isNombreEmpty(prueba.name) && nombreInput.touched}"
             name="business-outline" slot="start"></ion-icon>
           <ion-input disabled value="JojayFood" type="text" #nombreInput="ngModel" [(ngModel)]="prueba.name" autocomplete="no-autocomplete"
-            placeholder="Nombre"></ion-input>
+            placeholder="{{'user.common.word.company' | translate}}"></ion-input>
           <ion-icon *ngIf="isNombreEmpty(prueba.name)  && nombreInput.touched" name="warning-outline" slot="end"
             class="warning-icon"></ion-icon>
         </ion-item>
@@ -35,7 +35,7 @@
           [ngClass]="{'input-warning': isNombreEmpty(prueba.author) && authorInput.touched}">
           <ion-icon name="person-outline" slot="start"></ion-icon>
           <ion-input disabled value="franz Joseph" type="text" #authorInput="ngModel" [(ngModel)]="prueba.author"
-            autocomplete="no-autocomplete" placeholder="Descripción"></ion-input>
+            autocomplete="no-autocomplete" placeholder="{{'form.data.name' | translate}}"></ion-input>
           <ion-icon *ngIf="isNombreEmpty(prueba.author)  && authorInput.touched" name="warning-outline"
             slot="end" class="warning-icon"></ion-icon>
         </ion-item>
@@ -48,7 +48,7 @@
           [ngClass]="{'input-warning': isNombreEmpty(prueba.date) && dateInput.touched}">
           <ion-icon name="calendar-outline" slot="start"></ion-icon>
           <ion-input disabled value="21-08-2023" type="text" #dateInput="ngModel" [(ngModel)]="prueba.date"
-            autocomplete="no-autocomplete" placeholder="Descripción"></ion-input>
+            autocomplete="no-autocomplete" placeholder="{{'form.data.date' | translate}}"></ion-input>
           <ion-icon *ngIf="isNombreEmpty(prueba.date)  && dateInput.touched" name="warning-outline"
             slot="end" class="warning-icon"></ion-icon>
         </ion-item>
@@ -62,7 +62,7 @@
         >
           <ion-icon name="person-outline" slot="start"></ion-icon>
           <ion-input type="text" #observation="ngModel" [(ngModel)]="prueba.observation" autocomplete="no-autocomplete"
-            placeholder="Comentarios"></ion-input>
+            placeholder='{{"user.common.word.comments" | translate}}'></ion-input>
         </ion-item>
         <ion-icon *ngIf="isNombreEmpty(prueba.observation)  && observation.touched" name="warning-outline" slot="end"
             class="warning-icon"></ion-icon>
@@ -75,7 +75,7 @@
           [ngClass]="{'input-warning': isNombreEmpty(prueba.status) && status.touched}">
           <ion-icon name="person-outline" slot="start"></ion-icon>
           <ion-input type="text" #status="ngModel" [(ngModel)]="prueba.status" autocomplete="no-autocomplete"
-            placeholder="Resultados"></ion-input>
+            placeholder='{{"user.common.word.Results" | translate}}'></ion-input>
           <ion-icon *ngIf="isNombreEmpty(prueba.status)  && status.touched" name="warning-outline" slot="end"
             class="warning-icon"></ion-icon>
         </ion-item>
@@ -84,7 +84,7 @@
 
 
       <div class="button">
-        <button [disabled]="!camposCompletos()" (click)="createNewProject()" class="btn btn-primary">{{"publicar" |
+        <button [disabled]="!camposCompletos()" (click)="createNewProject()" class="btn btn-primary">{{"user.applicants.technical.test.publish" | translate   |
           uppercase}}</button>
       </div>
   </div>

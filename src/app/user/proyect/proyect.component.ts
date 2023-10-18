@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-proyect',
@@ -71,6 +72,7 @@ export class ProyectComponent implements OnInit {
 
   filteredList:any[];
   constructor(private modalCtrl: ModalController,
+    private translate: TranslateService,
     private router: Router) {
     this.searchInput = ""
     this.filteredList = [...this.items];
@@ -79,6 +81,8 @@ export class ProyectComponent implements OnInit {
   }
 
   ngOnInit() {
+    const lang = localStorage.getItem('appLang') || 'es';
+    this.translate.use(lang);
   }
 
   fistWord(word:string):string{

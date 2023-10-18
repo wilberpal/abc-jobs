@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 const dummy=[{
   nombre:"Estados Unidos",
@@ -50,13 +51,17 @@ export class VerifyAccountComponent  implements OnInit {
   activePhone:boolean;
   activeMail:boolean;
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+    private translate: TranslateService) {
     this.step = 0;
     this.activeMail = false;
     this.activePhone = false;
    }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const lang = localStorage.getItem('appLang') || 'es';
+    this.translate.use(lang);
+  }
 
   next(){
     if(this.step >= 0 && this.step < 4){

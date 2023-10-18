@@ -12,10 +12,13 @@ export class CreateAccountComponent  implements OnInit {
   confirmarContrasena = false;
   constructor(private router: Router,
     private translate:TranslateService) {
-      translate.setDefaultLang('es')
+
     }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const lang = localStorage.getItem('appLang') || 'es';
+      this.translate.use(lang);
+  }
 
   backPage() {
     window.history.back();

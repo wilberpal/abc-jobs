@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, Platform } from '@ionic/angular';
 import { AccesibilityComponent } from '../accesibility/accesibility.component';
 
 @Component({
@@ -9,7 +9,8 @@ import { AccesibilityComponent } from '../accesibility/accesibility.component';
 })
 export class TopNavComponent  implements OnInit {
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController,
+    private platform: Platform) { }
 
   ngOnInit() {}
 
@@ -20,6 +21,14 @@ export class TopNavComponent  implements OnInit {
     });
 
     return await modal.present();
+  }
+
+  desktop():boolean{
+    if (this.platform.is('desktop')) {
+      return true
+   } else {
+    return false
+   }
   }
 
 }

@@ -63,7 +63,7 @@
           [ngClass]="{'input-warning': isNombreEmpty(prueba.status) && status.touched}">
           <ion-icon name="person-outline" slot="start"></ion-icon>
           <ion-input type="text" #status="ngModel" [(ngModel)]="prueba.status" autocomplete="no-autocomplete"
-            placeholder="Resultados"></ion-input>
+            placeholder='{{"user.common.word.Results" | translate | titlecase}}'></ion-input>
           <ion-icon *ngIf="isNombreEmpty(prueba.status)  && status.touched" name="warning-outline" slot="end"
             class="warning-icon"></ion-icon>
         </ion-item>
@@ -75,7 +75,7 @@
           [ngClass]="{'input-warning': isNombreEmpty(prueba.technology) && technologyInput.touched}">
           <ion-icon name="time-outline" slot="start"></ion-icon>
           <ion-select #technologyInput="ngModel" [(ngModel)]="prueba.technology" autocomplete="no-autocomplete"
-            placeholder="Tecnologia">
+            placeholder='{{"user.applicants.technical.test.technology" | translate}}'>
             <ion-select-option value="good">Angular</ion-select-option>
             <ion-select-option value="caution">Java</ion-select-option>
             <ion-select-option value="bad">Excel</ion-select-option>
@@ -91,13 +91,13 @@
         <ion-item class="css-input">
           <ion-icon name="person-outline" slot="start"></ion-icon>
           <ion-input type="text" #observation="ngModel" [(ngModel)]="prueba.observation" autocomplete="no-autocomplete"
-            placeholder="Comentarios"></ion-input>
+            placeholder='{{"user.common.word.comments" | translate}}'></ion-input>
         </ion-item>
       </div>
     </div>
 
       <div class="button">
-        <button [disabled]="!camposCompletos()" (click)="createNewProject()" class="btn btn-primary">{{"publicar" |
+        <button [disabled]="!camposCompletos()" (click)="createNewProject()" class="btn btn-primary">{{"user.applicants.technical.test.publish" | translate |
           uppercase}}</button>
       </div>
   </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-test',
@@ -91,7 +92,8 @@ export class TestComponent  implements OnInit {
     },
   ]
   constructor(private modalCtrl: ModalController,
-    private router: Router) {
+    private router: Router,
+    private translate: TranslateService) {
     this.searchInput = ""
     this.filteredList = [...this.items];
     this.isModalOpen = false
@@ -114,6 +116,9 @@ export class TestComponent  implements OnInit {
     this.router.navigate(['/user/interview/1']);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const lang = localStorage.getItem('appLang') || 'es';
+    this.translate.use(lang);
+  }
 
 }

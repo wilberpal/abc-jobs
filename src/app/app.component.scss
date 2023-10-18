@@ -1,2 +1,20 @@
 ion-header{
+  box-shadow: none;
+}
+
+body.dark {
+  --ion-background-color: #222;
+  --ion-text-color: #ddd;
+  .container{
+    --ion-background-color: #222;
+    --ion-text-color: #ddd;
+  }
+  .title-description{
+    background-color: #222;
+    color: #ddd;
+  }
+  .text-description{
+    --ion-background-color: #222;
+    --ion-text-color: #ddd;
+  }
 }

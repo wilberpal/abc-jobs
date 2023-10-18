@@ -114,7 +114,6 @@ export class ProfileComponent  implements OnInit {
 
   constructor(private modalCtrl: ModalController,
     private translate:TranslateService) {
-    translate.setDefaultLang('es')
   }
 
   async AcademicModal() {
@@ -172,6 +171,9 @@ export class ProfileComponent  implements OnInit {
     return await modal.present();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const lang = localStorage.getItem('appLang') || 'es';
+    this.translate.use(lang);
+  }
 
 }

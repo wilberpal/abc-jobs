@@ -2,14 +2,14 @@
   <ion-row class="row">
     <ion-col class="col-12">
       <div class="title-description">
-        Proyectos
+        {{"user.common.word.project" | translate}}
       </div>
     </ion-col>
     <ion-col class="col-12">
       <div class="input-form">
         <ion-item class="css-input">
           <ion-icon name="search-sharp"></ion-icon>
-          <ion-input autocomplete="no-autocomplete" placeholder="Buscar" [(ngModel)]="searchInput"
+          <ion-input autocomplete="no-autocomplete" placeholder='{{"user.common.word.search" | translate | titlecase}}' [(ngModel)]="searchInput"
             (keyup)="filterList()"></ion-input>
         </ion-item>
       </div>
@@ -32,7 +32,7 @@
     </ion-row>
   </ion-row>
   <div class="button">
-    <button class="btn btn-primary" (click)="presentModal()">+ Nuevo</button>
+    <button class="btn btn-primary" (click)="presentModal()">+ {{"user.common.word.new" | translate | titlecase}}</button>
   </div>
 </ion-header>
 

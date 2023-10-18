@@ -25,10 +25,10 @@
     </ion-col>
     <ion-col class="col-12">
       <p class="text-description">
-        Estado: Pausado
+        {{"user.common.word.status" | translate | titlecase}}: {{"user.common.word.paused" | translate | titlecase}}
       </p>
       <p class="text-description hyperlink">
-        Ver candidatos
+        {{"user.common.word.see" | translate | titlecase}} {{"user.common.word.applicants"   | translate | lowercase}}
       </p>
     </ion-col>
   </ion-row>
@@ -46,7 +46,7 @@
       </ion-item>
       <ion-item-options side="end">
         <ion-item-option class="option-button" (click)="performanceEvaluation()">
-          Agregar evaluacion de desempeño
+          {{"user.add.test.performance" | translate}}
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>

@@ -98,12 +98,14 @@ export class ApplicantsComponent  implements OnInit {
   constructor(private modalCtrl: ModalController,
     private router: Router,
     private translate:TranslateService) {
-      translate.setDefaultLang('es')
     this.searchInput = ""
     this.filteredList = [...this.items];
     this.isModalOpen = false }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const lang = localStorage.getItem('appLang') || 'es';
+    this.translate.use(lang);
+  }
 
   filterList() {
     if (!this.searchInput) {
@@ -129,7 +131,7 @@ export class ApplicantsComponent  implements OnInit {
     const modal = await this.modalCtrl.create({
       component: SuccessCreationComponent,
       componentProps: {
-        textModal: 'Se ha asignado el candidato a tu proyecto',
+        textModal: "user.applicants.add.project.tex",
         textButton: 'Ok'
       }
     });

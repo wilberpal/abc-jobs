@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="title-description">
+        {{"user.common.word.project" | translate}}
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="input-form">
+        <ion-item class="css-input" style="margin-right:0">
+          <ion-icon name="search-sharp"></ion-icon>
+          <ion-input autocomplete="no-autocomplete" placeholder='{{"user.common.word.search" | translate | titlecase}}' [(ngModel)]="searchInput"
+            (keyup)="filterList()"></ion-input>
+
+        </ion-item>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="button">
+        <button class="btn btn-primary" (click)="presentModal()">+ {{"user.common.word.new" | translate | titlecase}}</button>
+      </div>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="row item-list" *ngFor="let item of filteredList">
+      <div class="col-2 letter">
+        {{fistWord(item.name) | uppercase}}
+        <div class="container-ball">
+          <a class="ball" style="background-color: #54D969;" *ngIf="item.status == 'good'"></a>
+          <a class="ball" style="background-color: #FF7F23;" *ngIf="item.status == 'caution'"></a>
+          <a class="ball" style="background-color: #F03800;" *ngIf="item.status == 'bad'"></a>
+        </div>
+      </div>
+      <div class="col-3">
+        <p class="titleName">{{item.name | titlecase}}</p>
+      </div>
+      <div class="col-7">
+        <p class="text-description">{{item.shortDescription}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sidebar">
+  <app-sidebar></app-sidebar>
+</div>

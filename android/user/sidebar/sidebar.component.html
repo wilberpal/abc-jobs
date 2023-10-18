@@ -1,0 +1,34 @@
+<div class="floor-menu">
+  <div class="row">
+    <div  class="section">
+      <ion-item>
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-item>
+      {{"user.common.word.home" | translate | titlecase}}
+    </div>
+    <div class="col-12"  class="section" (click)="sendToInterview()">
+      <ion-item>
+        <ion-icon name="id-card-outline" ></ion-icon>
+      </ion-item>
+      {{"user.common.word.interview" | translate | titlecase}}
+    </div>
+    <div  class="section" (click)="sendToProject()">
+      <ion-item >
+        <ion-icon name="rocket-outline"></ion-icon>
+      </ion-item>
+      {{"user.common.word.project" | translate | titlecase}}
+    </div>
+    <div  class="section" (click)="sendToApplicant()">
+      <ion-item >
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-item>
+      {{"user.common.word.applicants" | translate | titlecase}}
+    </div>
+    <div  class="section">
+      <ion-item>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      {{"user.account" | translate | titlecase}}
+    </div>
+  </div>
+</div>

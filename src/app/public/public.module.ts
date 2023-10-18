@@ -12,6 +12,11 @@ import { CreateEnterpriseComponent } from './create-enterprise/create-enterprise
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { PresentationWebComponent } from './presentation-web/presentation-web.component';
+import { LoginWebComponent } from './login-web/login-web.component';
+import { ForgotPasswordWebComponent } from './forgot-password-web/forgot-password-web.component';
+import { CreateAccountWebComponent } from './create-account-web/create-account-web.component';
+import { CreateEnterpriseWebComponent } from './create-enterprise-web/create-enterprise-web.component';
 
 
 @NgModule({
@@ -20,7 +25,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     LoginComponent,
     ForgotPasswordComponent,
     CreateAccountComponent,
-    CreateEnterpriseComponent
+    CreateEnterpriseComponent,
+    PresentationWebComponent,
+    LoginWebComponent,
+    ForgotPasswordWebComponent,
+    CreateAccountWebComponent,
+    CreateEnterpriseWebComponent
   ],
   imports: [
     CommonModule,

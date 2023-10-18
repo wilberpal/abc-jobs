@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-create-enterprise',
@@ -8,9 +9,13 @@ import { Router } from '@angular/router';
 })
 export class CreateEnterpriseComponent  implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private translate: TranslateService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const lang = localStorage.getItem('appLang') || 'es';
+    this.translate.use(lang);
+  }
 
   backPage() {
     window.history.back();

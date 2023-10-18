@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { PerformanceComponent } from '../../performance/performance.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-detail',
@@ -45,12 +46,16 @@ export class ProjectDetailComponent  implements OnInit {
     },]
 
     constructor(private modalCtrl: ModalController,
-      private router: Router) {
+      private router: Router,
+      private translate: TranslateService) {
       this.searchInput = ""
       this.filteredList = [...this.items];
       this.isModalOpen = false }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const lang = localStorage.getItem('appLang') || 'es';
+    this.translate.use(lang);
+  }
 
 
   backPage() {

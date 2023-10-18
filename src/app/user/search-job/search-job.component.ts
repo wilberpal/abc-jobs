@@ -36,12 +36,14 @@ export class SearchJobComponent  implements OnInit {
   dummy:any[]=dummy;
   constructor(private router:Router,
     private translate: TranslateService) {
-      translate.setDefaultLang('es')
      }
 
   goToAccount(){
     this.router.navigate(['/signup']);
   }
-  ngOnInit() {}
+  ngOnInit() {
+    const lang = localStorage.getItem('appLang') || 'es';
+    this.translate.use(lang);
+  }
 
 }
