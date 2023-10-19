@@ -40,7 +40,7 @@
           <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
           <ion-input autocomplete="no-autocomplete" placeholder="{{'form.data.password' | translate}}"
             [type]="mostrarContrasena ? 'text' : 'password'"></ion-input>
-          <ion-icon slot="end" name="{{mostrarContrasena ? 'eye-off' : 'eye'}}"
+          <ion-icon class="icon-eye" slot="end" name="{{mostrarContrasena ? 'eye-off' : 'eye'}}"
             (click)="mostrarContrasena = !mostrarContrasena">
           </ion-icon>
         </ion-item>

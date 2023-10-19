@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LoginComponent implements OnInit {
   mostrarContrasena = false;
+  modeScreen:string = ""
   constructor(private router: Router,
      private translate: TranslateService) {
    }
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
     const lang = localStorage.getItem('appLang') || 'es';
     this.translate.use(lang);
     const Mode = localStorage.getItem('DarkMode') || 'light';
+    this.modeScreen = Mode;
     if(Mode === 'dark'){
       document.body.classList.toggle('dark', true);
     }

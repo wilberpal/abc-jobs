@@ -7,10 +7,10 @@
       <div class="card-job" *ngFor="let dummie of dummy; let i index">
         <div class="row" style="width:100%">
           <div class="col-2">
-            <ion-icon [name]="dummie.icon" slot="start"></ion-icon>
+            <img [src]="dummie.icon" alt="">
           </div>
           <div class="col-6">
-            {{dummie.nombre  | titlecase}}
+            {{dummie.nombre }}
           </div>
           <div class="col-1">
             <ion-checkbox (click)="addValue(dummie)" value="dummie"></ion-checkbox>

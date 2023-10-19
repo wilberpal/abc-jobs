@@ -1,6 +1,6 @@
-<ion-content class="container">
+<ion-content>
 
-  <div (click)="back()" *ngIf="step > 0">
+  <div class="container" (click)="back()" *ngIf="step > 0">
     <div class="button-back-2">
       <img src="/assets/image/btnBack.png" alt="Button-back" *ngIf="modeScreen == 'light'">
       <img src="/assets/image/btnBack-dark.png" alt="Button-back-dark" *ngIf="modeScreen == 'dark'">
@@ -38,7 +38,7 @@
     </div>
   </div>
 
-  <div class="row" *ngIf="step==1">
+  <div class="container" class="row" *ngIf="step==1">
     <div class="col-12 center">
       <div class="title-description">
         {{"common.verify.identity.title" | translate}}

@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container-card">
   <div class="row">
-    <div class="col-3 box-image">
+    <div class="col-4 box-image">
       <div class="image" *ngIf="option==1">
         <svg width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_24_135)">
@@ -79,7 +79,7 @@
       </div>
 
     </div>
-    <div class="col-9">
+    <div class="col-8">
       <div class="title" [ngStyle]="{'color': option !==3 ? '#00000': '#6e6e6e'}">
         {{title | translate | uppercase}}
       </div>
