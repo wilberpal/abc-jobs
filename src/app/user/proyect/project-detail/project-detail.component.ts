@@ -44,7 +44,7 @@ export class ProjectDetailComponent  implements OnInit {
       author:"Hugo Sebastian Rodriguez",
       date:"20 de Septiembre 2023 - 10:30 am"
     },]
-
+    modeScreen:string=""
     constructor(private modalCtrl: ModalController,
       private router: Router,
       private translate: TranslateService) {
@@ -55,6 +55,11 @@ export class ProjectDetailComponent  implements OnInit {
   ngOnInit() {
     const lang = localStorage.getItem('appLang') || 'es';
     this.translate.use(lang);
+    const Mode = localStorage.getItem('DarkMode') || 'light';
+    this.modeScreen = Mode;
+    if(Mode === 'dark'){
+      document.body.classList.toggle('dark', true);
+    }
   }
 
 

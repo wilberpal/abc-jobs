@@ -36,12 +36,33 @@ body.dark {
     --ion-background-color: #222;
     --ion-text-color: #ddd;
   }
-  .title-description{
+  .text{
+    color: #ddd;
+
+  }
+  .list-country, .job-description{
+    color: #ddd;
+  }
+
+  .button-access{
+    border: 1px solid white
+  }
+
+
+
+  .title-description, nav{
     background-color: #222;
     color: #ddd;
   }
   .text-description{
     color: #ddd;
+  }
+
+  .card-job{
+    box-shadow: -3px 5px 10px -6px rgba(255,255,255,1);
+    .p-head, .p-body{
+      color: #ddd;
+    }
   }
 
   .css-input {
@@ -83,8 +104,8 @@ ion-icon.dark {
 }
 
 .btn-primary:disabled {
-  background: #d0d0d0;
-  color: #232323;
+  background: #a7a5a9;
+  color: #ffff;
 }
 
 :root {
@@ -199,10 +220,26 @@ ion-item {
 }
 
 .container {
-
+  overflow-y: scroll;
   margin: auto;
   padding: 0 20px;
   margin-bottom: 80px;
+  scrollbar-width: none;
+  scrollbar-color: #bababa #ffffff;
 
+}
 
+/* Chrome, Edge, and Safari */
+.container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #bababa;
+  border-radius: 10px;
+  border: -1px solid #ffffff;
 }

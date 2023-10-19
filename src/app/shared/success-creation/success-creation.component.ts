@@ -7,12 +7,16 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./success-creation.component.scss'],
 })
 export class SuccessCreationComponent  implements OnInit {
+  modeScreen: string = ""
   @Input() textModal: string = "";
   @Input() textButton: string = "";
 
   constructor(private modalCtrl: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const Mode = localStorage.getItem('DarkMode') || 'light';
+    this.modeScreen = Mode;
+  }
 
   closeModal() {
     this.modalCtrl.dismiss();

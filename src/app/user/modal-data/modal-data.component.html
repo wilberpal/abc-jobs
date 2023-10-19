@@ -1,15 +1,16 @@
 <ion-content>
   <div class="row align-row">
-    <div class="col-3">
-      <div class="object-button" (click)="closeModal()">
-        <div class="button-back">
-          <ion-icon name="arrow-back-outline"></ion-icon>
+    <div class="col-2">
+      <div (click)="closeModal()">
+        <div class="button-back-2">
+          <img src="/assets/image/btnBack.png" alt="Button-back" *ngIf="modeScreen == 'light'">
+          <img src="/assets/image/btnBack-dark.png" alt="Button-back-dark" *ngIf="modeScreen == 'dark'">
         </div>
       </div>
     </div>
 
 
-    <div class="col-9">
+    <div class="col-10">
       <div class="title-description">
         {{title | translate}}
       </div>

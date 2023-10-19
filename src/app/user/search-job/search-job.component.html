@@ -4,7 +4,7 @@
       <div class="title-description">
         {{"common.find.job" | translate}}
       </div>
-      <div class="card-job" *ngFor="let dummie of dummy">
+      <div class="card-job" *ngFor="let dummie of dummy; let i index">
         <div class="row" style="width:100%">
           <div class="col-2">
             <ion-icon [name]="dummie.icon" slot="start"></ion-icon>
@@ -13,13 +13,13 @@
             {{dummie.nombre  | titlecase}}
           </div>
           <div class="col-1">
-            <ion-checkbox></ion-checkbox>
+            <ion-checkbox (click)="addValue(dummie)" value="dummie"></ion-checkbox>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="button">
-    <button class="btn btn-primary" (click)="goToAccount()">{{"common.button.continue" | translate | uppercase}}</button>
+    <button class="btn btn-primary" [disabled]="!SelectedVal" (click)="goToAccount()">{{"common.button.continue" | translate | uppercase}}</button>
   </div>
 </ion-content>

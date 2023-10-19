@@ -82,6 +82,10 @@ export class ProjecteWebComponent implements OnInit {
   ngOnInit() {
     const lang = localStorage.getItem('appLang') || 'es';
     this.translate.use(lang);
+    const Mode = localStorage.getItem('DarkMode') || 'light';
+    if(Mode === 'dark'){
+      document.body.classList.toggle('dark', true);
+    }
   }
 
   fistWord(word: string): string {

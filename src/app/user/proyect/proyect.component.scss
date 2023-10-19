@@ -1,6 +1,7 @@
 .title-description {
   text-align: center;
   margin: auto;
+  margin-bottom: 25px;
 }
 
 .content {
@@ -34,7 +35,7 @@
 }
 
 .item-list {
-  height: 80px;
+  height: 90px;
   border-bottom:1px solid #E5E5E5;
 }
 
@@ -52,7 +53,7 @@
 .text-description {
   margin: 0;
   font-family: 'Poppins', 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 21px;
   letter-spacing: 0em;
@@ -64,12 +65,16 @@
   display: flex;
   margin: auto;
   margin-top: 10px;
-  margin-bottom: 80px;
-  width: 95%;
+  margin-bottom: 20px;
+  width: 45%;
 }
 
 .container{
-height: 35%;
+height: 60%;
+margin-bottom: 15px;
+overflow-y: scroll;
+width: 100%!important;
+min-width: 350px!important;
 }
 .floor-menu{
   position: absolute;

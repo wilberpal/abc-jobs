@@ -1,22 +1,19 @@
-.object-button {
-  display: flex;
-  margin: auto;
-
-  ion-icon {
-    display: flex;
-    margin: auto;
-    color: #6C6C6C;
-
-  }
-}
-
 .title-description {
   margin-top: 30px;
   text-align: center;
+  font-weight: 500;
 }
 
-.button-back {
+.button-back-2 {
   margin-top: 20px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  img{
+    width: 48px;
+    height: 48px;
+  }
+
 }
 
 .align-row {
@@ -29,12 +26,13 @@
 }
 
 .button {
-  width: 95%;
+  width: 100%;
   display: flex;
   margin: auto;
   position: absolute;
   bottom: 30px;
   button{
+    width: 85%;
     margin: auto;
   }
 }
@@ -53,13 +51,13 @@
 
 .button-less,
 .button-more {
-  background: #017DA5DE;
-  color: #ffff;
-  font-size: 21px;
-  text-decoration: none!important;
-  font-weight: 400!important;
-  border-radius: 50px;
-  padding: 10px 18px;
+width: 53px;
+height: 50px;
+}
+
+.txt{
+  width: 20px;
+  height: 20px;
 }
 
 
@@ -81,6 +79,7 @@
     font-size: 14px;
     text-align: center;
     margin: auto;
+    margin-top:15px;
   }
 }
 
@@ -103,6 +102,13 @@
 
 }
 
+.description{
+  margin-left: 65px;
+  width: 80%;
+  color: #64748B;
+
+}
+
 .warning-icon {
   color: red;
   font-size: 1.2em;
@@ -111,6 +117,6 @@
 
 img {
   height: 35px;
-  width: 55px;
-  margin-right: 20px;
+  width: 40px;
+  margin-right: 15px;
 }

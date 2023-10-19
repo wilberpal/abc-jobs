@@ -1,8 +1,9 @@
 <ion-content class="container">
 
-  <div class="object-button" (click)="back()" *ngIf="step > 0">
-    <div class="button-back">
-      <ion-icon name="arrow-back-outline"></ion-icon>
+  <div (click)="back()" *ngIf="step > 0">
+    <div class="button-back-2">
+      <img src="/assets/image/btnBack.png" alt="Button-back" *ngIf="modeScreen == 'light'">
+      <img src="/assets/image/btnBack-dark.png" alt="Button-back-dark" *ngIf="modeScreen == 'dark'">
     </div>
   </div>
 
@@ -23,8 +24,8 @@
         </div>
       </div>
       <div class="container-list">
-        <div class="list-country" *ngFor="let dummie of dummy">
-          <div class="row" style="width:100%">
+        <div class="list-country" *ngFor="let dummie of dummy" [ngStyle]="{'background-color': dummie == countrySelected ? '#017DA5' : null}">
+          <div class="row" style="width:100%"(click)="chooseCountry(dummie)">
             <div class="col-12">
               {{dummie.nombre | titlecase}}
             </div>
@@ -32,7 +33,7 @@
         </div>
       </div>
       <div class="button">
-        <button class="btn btn-primary" (click)="next()">{{"common.button.continue" | translate | uppercase}}</button>
+        <button class="btn btn-primary" [disabled]="!countrySelected" (click)="next()">{{"common.button.continue" | translate | uppercase}}</button>
       </div>
     </div>
   </div>
@@ -47,7 +48,7 @@
       </div>
 
       <div class="card-job" style="border:1px solid #E2E8F0" (click)="activeVerify('mail')"
-        [ngClass]="{'active': activeMail}">
+        [ngStyle]="{'border': activeMail ? '1px solid #017DA5' : null }">
         <div class="row" style="width:100%">
           <div class="col-1">
             <ion-icon name="mail-outline"></ion-icon>
@@ -57,13 +58,13 @@
             <p class="p-body">{{"common.verify.identity.span" | translate}} {{"form.data.email" | translate}}</p>
           </div>
           <div class="col-1"  *ngIf="activeMail">
-            <ion-icon name="checkmark-outline"></ion-icon>
+            <ion-icon name="checkmark-outline" style="margin-top:-8px" [ngStyle]="{'color': activeMail ? '#017DA5' : null}"></ion-icon>
           </div>
         </div>
       </div>
 
       <div class="card-job" style="border:1px solid #E2E8F0" (click)="activeVerify('phone')"
-        [ngClass]="{'active': activePhone}">
+      [ngStyle]="{'border': activePhone ? '1px solid #017DA5' : null }">
         <div class="row" style="width:100%">
           <div class="col-1">
             <ion-icon name="call-outline"></ion-icon>
@@ -73,7 +74,7 @@
             <p class="p-body">{{"common.verify.identity.span" | translate}} {{"form.data.phone" | translate}}</p>
           </div>
           <div class="col-1"  *ngIf="activePhone">
-            <ion-icon name="checkmark-outline"></ion-icon>
+            <ion-icon name="checkmark-outline" style="margin-top:-8px" [ngStyle]="{'color': activePhone ? '#017DA5' : null}"></ion-icon>
           </div>
         </div>
       </div>
@@ -94,12 +95,12 @@
 
       <div class="input-form">
         <ion-item class="css-input">
-          <ion-input autocomplete="no-autocomplete" placeholder='{{"form.data.phone" | translate}}'></ion-input>
+          <ion-input type="number" [(ngModel)]="cellphone" autocomplete="no-autocomplete" placeholder='{{"form.data.phone" | translate}}'></ion-input>
         </ion-item>
       </div>
 
     <div class="button">
-      <button class="btn btn-primary" (click)="next()" [disabled]="!activePhone && !activeMail">{{"common.button.continue" | translate | uppercase}}</button>
+      <button class="btn btn-primary" (click)="next()" [disabled]="cellphone < 999 ">{{"common.button.continue" | translate | uppercase}}</button>
     </div>
   </div>
 </div>
@@ -115,12 +116,12 @@
 
     <div class="input-form">
       <ion-item class="css-input">
-        <ion-input autocomplete="no-autocomplete" placeholder='{{"form.data.email" | translate | titlecase}}'></ion-input>
+        <ion-input autocomplete="no-autocomplete" #Email [(ngModel)]="email" placeholder='{{"form.data.email" | translate | titlecase}}'></ion-input>
       </ion-item>
     </div>
 
   <div class="button">
-    <button class="btn btn-primary" (click)="next()" [disabled]="!activePhone && !activeMail">{{"common.button.continue" | translate | uppercase}}</button>
+    <button class="btn btn-primary" (click)="next()" [disabled]="!email">{{"common.button.continue" | translate | uppercase}}</button>
   </div>
 </div>
 </div>

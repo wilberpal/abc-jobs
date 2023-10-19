@@ -3,6 +3,7 @@
   margin: auto;
   margin-bottom: 15px;
   margin-top: 15px;
+  font-size: 18px;
 
 }
 .text-description{
@@ -21,6 +22,7 @@
   color: #101520b0;
 }
 .image-profile{
+  margin: auto;
   img{
     display: flex;
     margin: auto;
@@ -29,6 +31,10 @@
     border-radius: 100px;
     border: 0px;
   }
+}
+
+.account{
+  margin-left: 0!important;
 }
 
 .card-file{

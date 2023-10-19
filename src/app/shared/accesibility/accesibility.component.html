@@ -1,19 +1,16 @@
 <ion-content>
-  <div class="row align-row">
-    <div class="col-3">
-      <div class="object-button" (click)="closeModal()">
-        <div class="button-back">
-          <ion-icon name="arrow-back-outline"></ion-icon>
-        </div>
-      </div>
+  <div (click)="closeModal()">
+    <div class="button-back-2">
+      <img src="/assets/image/btnBack.png" alt="Button-back" *ngIf="modeScreen == 'light'">
+      <img src="/assets/image/btnBack-dark.png" alt="Button-back-dark" *ngIf="modeScreen == 'dark'">
     </div>
-
-
-    <div class="col-9">
+  </div>
+  <div class="row align-row">
+    <div class="col-12">
       <div class="title-description">
         {{"user.accesibility" | translate | titlecase}}
       </div>
-      <div class="text-description">
+      <div class="text-description description">
         {{"user.accesibility.text" | translate}}
       </div>
     </div>
@@ -21,7 +18,7 @@
   <div class="row">
     <div class="col-12 center">
       <div class="input-form">
-        <<ion-item class="css-input">
+        <ion-item class="css-input">
         <img src="\assets\image\Spanish.png" *ngIf="languageChoose == 'es'" alt="language-English">
         <img src="\assets\image\english.webp" *ngIf="languageChoose == 'en'" alt="language-Spanish">
         <ion-select (ionChange)="changeLang()" #language="ngModel" [(ngModel)]="languageChoose" autocomplete="no-autocomplete"
@@ -34,11 +31,13 @@
     </div>
     <ion-row>
       <ion-col class="col-6 access" (click)="setDarkMode(true)">
-        <ion-icon name="moon-outline"></ion-icon>
+        <img src="\assets\image\moon-light.png" alt="moon-light" *ngIf="modeScreen == 'light'">
+        <img src="\assets\image\moon-dark.png" alt="moon-dark" *ngIf="modeScreen == 'dark'">
         <a>{{"user.accesibility.night" | translate | titlecase}}</a>
       </ion-col>
       <ion-col class="col-6 access" (click)="setDarkMode(false)">
-        <ion-icon name="sunny-outline"></ion-icon>
+        <img src="\assets\image\light.png" alt="light-white" *ngIf="modeScreen == 'light'">
+        <img src="\assets\image\light-dark.png" alt="light-black" *ngIf="modeScreen == 'dark'">
         <a>{{"user.accesibility.day" | translate | titlecase}}</a>
       </ion-col>
     </ion-row>
@@ -49,21 +48,20 @@
         </p>
       </ion-col>
       <ion-col class="col-2 access">
-        <a class="min">A</a>
-        <a class="max">A</a>
+        <img class="txt" src="\assets\image\txt.png" alt="size">
       </ion-col>
       <ion-col class="col-2 access" style="text-align: right;">
-        <a class="button-more">A</a>
+        <img class="button-more" src="\assets\image\ore.png" alt="size-up">
       </ion-col>
       <ion-col class="col-4 access"  style="text-align: left;">
-        <a class="button-less">A</a>
+        <img class="button-less" src="\assets\image\less.png" alt="size-less">
       </ion-col>
     </ion-row>
 
-    <div class="button">
-      <button
-        class="btn btn-primary" (click)="closeModal()">{{"common.button.next" | translate}}</button>
-    </div>
+  </div>
+  <div class="button">
+    <button
+      class="btn btn-primary" (click)="closeModal()">{{"common.button.next" | translate}}</button>
   </div>
 
   <!--language DATA-->

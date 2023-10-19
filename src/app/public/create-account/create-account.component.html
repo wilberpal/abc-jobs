@@ -1,7 +1,8 @@
 <ion-content class="container">
-  <div class="object-button" (click)="backPage()">
-    <div class="button-back">
-      <ion-icon name="arrow-back-outline"></ion-icon>
+  <div (click)="backPage()">
+    <div class="button-back-2">
+      <img src="/assets/image/btnBack.png" alt="Button-back" *ngIf="modeScreen == 'light'">
+      <img src="/assets/image/btnBack-dark.png" alt="Button-back-dark" *ngIf="modeScreen == 'dark'">
     </div>
   </div>
 
@@ -16,7 +17,7 @@
       <div class="input-form">
         <ion-item class="css-input">
           <ion-icon name="person-outline" slot="start"></ion-icon>
-          <ion-input autocomplete="no-autocomplete" placeholder="{{'form.data.name' | translate}}"></ion-input>
+          <ion-input  autocomplete="no-autocomplete" placeholder="{{'form.data.name' | translate}}"></ion-input>
         </ion-item>
       </div>
 

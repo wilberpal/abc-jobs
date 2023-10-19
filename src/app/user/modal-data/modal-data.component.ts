@@ -10,6 +10,7 @@ export class ModalDataComponent  implements OnInit {
   @Input() option:number = 0
   @Input() title:string = ""
   @Input() description:string = ""
+  modeScreen:string=""
   academic = {
     institucion: '',
     career: '',
@@ -39,7 +40,10 @@ export class ModalDataComponent  implements OnInit {
 
   constructor(private modalCtrl: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const Mode = localStorage.getItem('DarkMode') || 'light';
+    this.modeScreen = Mode;
+  }
 
   closeModal() {
     this.modalCtrl.dismiss();

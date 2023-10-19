@@ -46,10 +46,15 @@ const dummy=[{
   styleUrls: ['./verify-account.component.scss'],
 })
 export class VerifyAccountComponent  implements OnInit {
+  cellphone:number = 0;
+  country = "";
+  modeScreen:string = ''
   dummy:any[]=dummy;
   step:number;
   activePhone:boolean;
   activeMail:boolean;
+  countrySelected:any;
+  email:string=""
 
   constructor(private router: Router,
     private translate: TranslateService) {
@@ -61,12 +66,21 @@ export class VerifyAccountComponent  implements OnInit {
   ngOnInit() {
     const lang = localStorage.getItem('appLang') || 'es';
     this.translate.use(lang);
+    const Mode = localStorage.getItem('DarkMode') || 'light';
+    this.modeScreen = Mode;
+    if(Mode === 'dark'){
+      document.body.classList.toggle('dark', true);
+    }
   }
 
   next(){
     if(this.step >= 0 && this.step < 4){
       this.step += 1;
     }
+  }
+
+  chooseCountry(dummie:any){
+    this.countrySelected =dummie;
   }
 
   back(){

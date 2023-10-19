@@ -10,31 +10,34 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AccesibilityComponent  implements OnInit {
   languageChoose:string = ''
+  modeScreen:string = ''
   constructor(private modalCtrl: ModalController,
     private translate:TranslateService,
     private router: Router,
     private route: ActivatedRoute) {
-      const lang = localStorage.getItem('appLang') || 'es';
-      this.translate.use(lang);
-      this.languageChoose === lang
+
    }
 
   ngOnInit() {
-
+    const lang = localStorage.getItem('appLang') || 'es';
+    const Mode = localStorage.getItem('DarkMode') || 'light';
+    this.modeScreen = Mode;
+    if(Mode === 'dark'){
+      document.body.classList.toggle('dark', true);
+    }
+    this.languageChoose = lang
+      this.translate.use(lang);
   }
 
   changeLang() {
-    console.log("11111111111111111111")
     const lang = localStorage.getItem('appLang') || 'es';
     console.log("lang", lang)
     console.log("Actual", this.languageChoose)
     if(lang === 'es' && this.languageChoose === 'en'){
       this.translate.use('en');
       localStorage.setItem('appLang', 'en');
-      console.log("22222222222222222222222")
     }
     if(lang === 'en' && this.languageChoose === 'es'){
-      console.log("33333333333333333333")
       this.translate.use('es');
       localStorage.setItem('appLang', 'es');
     }
@@ -53,6 +56,13 @@ export class AccesibilityComponent  implements OnInit {
 
   setDarkMode(isDark: boolean) {
     document.body.classList.toggle('dark', isDark);
+    if(isDark == true){
+      localStorage.setItem('DarkMode', 'dark');
+      this.modeScreen = 'dark'
+    }else{
+      localStorage.setItem('DarkMode', 'light');
+      this.modeScreen = 'light'
+    }
   }
 
 }

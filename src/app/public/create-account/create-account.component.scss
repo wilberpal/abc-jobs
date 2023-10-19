@@ -28,19 +28,20 @@
     line-height: 42px;
     text-align: left;
     font-size: 22px;
-    margin-bottom: 20px;
-    margin-left: 80px;
+    margin-bottom: 2px;
+    margin-left: 20px;
   }
 
   .text-description{
     font-family: 'Poppins', 'Open Sans', sans-serif;
     font-weight: 400;
-    size: 14px;
     line-height: 22px;
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
     margin-left: 20px;
+    margin-right: 10px;
+    color: #64748B;
 
   }
 
@@ -59,6 +60,18 @@
   }
   .css-input:focus {
     outline:none;
+  }
+
+  .button-back-2 {
+    img{
+      width: 48px;
+      height: 48px;
+    }
+
+  }
+
+  .button{
+    margin-bottom: 15px;
   }
 
   .container{

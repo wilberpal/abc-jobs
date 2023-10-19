@@ -8,8 +8,17 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./create-account.component.scss'],
 })
 export class CreateAccountComponent  implements OnInit {
+  accountDummie={
+    user:"",
+    phone:"",
+    email:"",
+    password:""
+
+  }
+  modeScreen:string = ''
   mostrarContrasena = false;
   confirmarContrasena = false;
+  inputConfirmarContrasena:string = "";
   constructor(private router: Router,
     private translate:TranslateService) {
 
@@ -18,6 +27,11 @@ export class CreateAccountComponent  implements OnInit {
   ngOnInit() {
     const lang = localStorage.getItem('appLang') || 'es';
       this.translate.use(lang);
+      const Mode = localStorage.getItem('DarkMode') || 'light';
+      this.modeScreen = Mode;
+      if(Mode === 'dark'){
+        document.body.classList.toggle('dark', true);
+      }
   }
 
   backPage() {

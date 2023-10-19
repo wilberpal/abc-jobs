@@ -33,6 +33,7 @@ const dummy=[{
   styleUrls: ['./search-job.component.scss'],
 })
 export class SearchJobComponent  implements OnInit {
+  SelectedVal:boolean=false;
   dummy:any[]=dummy;
   constructor(private router:Router,
     private translate: TranslateService) {
@@ -44,6 +45,14 @@ export class SearchJobComponent  implements OnInit {
   ngOnInit() {
     const lang = localStorage.getItem('appLang') || 'es';
     this.translate.use(lang);
+    const Mode = localStorage.getItem('DarkMode') || 'light';
+    if(Mode === 'dark'){
+      document.body.classList.toggle('dark', true);
+    }
+  }
+
+  addValue(dummie:any){
+    this.SelectedVal = true
   }
 
 }

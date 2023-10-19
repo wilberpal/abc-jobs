@@ -2,12 +2,13 @@
 .title-description{
   font-family: 'Poppins', 'Open Sans', sans-serif;
   font-weight: 600;
-  line-height: 25px;
+  line-height: 36px;
   text-align: left;
-  font-size: 25px;
+  font-size: 22px;
   margin-bottom: 20px;
   color: #101520;
   margin-right: 40px;
+  margin-top: 15px;
 }
 
 .card-job{
@@ -30,7 +31,7 @@
 }
 
 ion-icon{
-  font-size: 22px;
+  font-size: 32px;
   color: #747476;
 }
 
@@ -45,6 +46,7 @@ ion-item{
   display: flex;
   margin: auto;
   button{
+    width: 84%;
     margin: auto;
   }
 }

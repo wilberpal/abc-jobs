@@ -13,10 +13,13 @@ export class CreateProjectComponent implements OnInit {
     status: '',
     rol: ''
   };
-
+  modeScreen=""
   constructor(private modalCtrl: ModalController) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    const Mode = localStorage.getItem('DarkMode') || 'light';
+    this.modeScreen = Mode;
+   }
 
   closeModal() {
     this.modalCtrl.dismiss();

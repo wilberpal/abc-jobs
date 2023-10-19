@@ -1,54 +1,61 @@
-
 <ion-content>
-  <ion-row class="row">
-    <ion-col class="col-2">
-      <div class="object-button" (click)="backPage()">
-        <div class="button-back">
-          <ion-icon name="arrow-back-outline"></ion-icon>
+  <div class="container">
+    <ion-row class="row" >
+      <ion-col class="col-2" style="padding:0">
+        <div (click)="backPage()">
+          <div class="button-back-2">
+            <img src="/assets/image/btnBack.png" alt="Button-back" *ngIf="modeScreen == 'light'">
+            <img src="/assets/image/btnBack-dark.png" alt="Button-back-dark" *ngIf="modeScreen == 'dark'">
+          </div>
         </div>
-      </div>
-    </ion-col>
-    <ion-col class="col-9">
-      <div class="title-description">
-        JoaJoyFood
-      </div>
-    </ion-col>
-    <ion-col class="col-1">
-      <a class="ball" style="background-color: #FF7F23;"></a>
-    </ion-col>
-  </ion-row>
-  <ion-row class="row">
-    <ion-col class="col-12">
-      <div class="text-description center-text">
-        Explora sabores que te haran feliz
-      </div>
-    </ion-col>
-    <ion-col class="col-12">
-      <p class="text-description">
-        {{"user.common.word.status" | translate | titlecase}}: {{"user.common.word.paused" | translate | titlecase}}
-      </p>
-      <p class="text-description hyperlink">
-        {{"user.common.word.see" | translate | titlecase}} {{"user.common.word.applicants"   | translate | lowercase}}
-      </p>
-    </ion-col>
-  </ion-row>
-  <ion-list>
-    <ion-item-sliding *ngFor="let item of filteredList">
-      <ion-item class="item-list" (click)="goToAccount()">
-        <ion-grid>
-          <ion-row>
-            <ion-col class="item-text"><img [src]="picture" alt="profile picture"></ion-col>
-            <ion-col class="ion-text-start col-title">{{item.author}}
-              <p>{{ item.job }}</p>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option class="option-button" (click)="performanceEvaluation()">
-          {{"user.add.test.performance" | translate}}
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
+      </ion-col>
+      <ion-col class="col-10">
+        <div class="title-description">
+          JoaJoyFood
+          <div class="container-ball">
+            <a class="ball" style="background-color: #FF7F23;"></a>
+          </div>
+          <div class="text-description center-text">
+            Explora sabores que te haran feliz
+          </div>
+        </div>
+      </ion-col>
+      <ion-col class="col-1">
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+
+      <ion-col class="col-12">
+
+      </ion-col>
+      <ion-col class="col-12">
+        <p class="text-description">
+          {{"user.common.word.status" | translate | titlecase}}: {{"user.common.word.paused" | translate | titlecase}}
+        </p>
+        <p class="text-description hyperlink">
+          {{"user.common.word.see" | translate | titlecase}} {{"user.common.word.applicants" | translate | lowercase}}
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-list>
+      <ion-item-sliding *ngFor="let item of filteredList">
+        <ion-item class="item-list" (click)="goToAccount()">
+          <ion-grid>
+            <ion-row>
+              <ion-col class="item-text"><img [src]="picture" alt="profile picture"></ion-col>
+              <ion-col class="ion-text-start col-title">{{item.author}}
+                <p>{{ item.job }}</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option class="option-button" (click)="performanceEvaluation()">
+            {{"user.add.test.performance" | translate}}
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </div>
 </ion-content>

@@ -1,36 +1,40 @@
 
 <ion-content>
   <div class="row container">
-    <div class="col-2">
-      <div class="object-button" (click)="backPage()">
-        <div class="button-back">
-          <ion-icon name="arrow-back-outline"></ion-icon>
+    <div class="col-2" style="padding:0">
+      <div (click)="backPage()">
+        <div class="button-back-2">
+          <img src="/assets/image/btnBack.png" alt="Button-back" *ngIf="modeScreen == 'light'">
+          <img src="/assets/image/btnBack-dark.png" alt="Button-back-dark" *ngIf="modeScreen == 'dark'">
         </div>
       </div>
     </div>
-    <div class="col-9">
+    <div class="col-10">
       <div class="title-description">
         Franz Rogelez
-        <a class="ball" style="background-color: #FF7F23;"></a>
       </div>
+        <div class="container-ball">
+          <a class="ball" style="background-color: #FF7F23;"></a>
+        </div>
+        <div class="row" style="margin-top:-40px">
+          <div class="col-12" style="padding:0">
+            <div class="text-description center-text">
+              Arquitecto de software
+            </div>
+          </div>
+        </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12">
-      <div class="text-description center-text">
-        Arquitecto de software
-      </div>
-    </div>
-  </div>
+
   <div class="row">
     <div class="col-12">
       <div class="text-description">
-        Resultado: Aceptable
+        <a>Resultado:</a> Aceptable
       </div>
     </div>
     <div class="col-12">
-      <div class="text-description">
-        Comentarios:<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eveniet ad dolorem amet deserunt
+      <div class="text-description" style="padding-right:50px">
+        <p>Comentarios:</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eveniet ad dolorem amet deserunt
           est, quod consectetur veniam placeat sit iusto voluptatem,</p>
       </div>
     </div>

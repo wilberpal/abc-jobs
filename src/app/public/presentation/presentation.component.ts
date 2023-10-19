@@ -10,6 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class PresentationComponent implements OnInit {
   step: number;
+  modeScreen:string=""
   constructor(private platform: Platform,
     private router: Router,
     private translate: TranslateService,
@@ -21,6 +22,11 @@ export class PresentationComponent implements OnInit {
   ngOnInit() {
     const lang = localStorage.getItem('appLang') || 'es';
     this.translate.use(lang);
+    const Mode = localStorage.getItem('DarkMode') || 'light';
+    this.modeScreen = Mode;
+    if(Mode === 'dark'){
+      document.body.classList.toggle('dark', true);
+    }
     if (this.platform.is('desktop')) {
       this.router.navigate(['/index']);
    } else {

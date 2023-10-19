@@ -1,6 +1,4 @@
-.title-description {
-  text-align: center;
-}
+
 
 ion-list {
   max-height: 65vh;
@@ -20,12 +18,21 @@ ion-list {
   height: 10px;
   display: flex;
   position: absolute;
-  top: 15px;
-  left: -60px;
+  top: -20px;
+  left: 220px;
   border-radius: 50px;
-
 }
 
+
+.button-back-2 {
+  margin-top: -10px;
+  margin-left: 5px;
+  img{
+    width: 48px;
+    height: 48px;
+  }
+
+}
 .item-list {
   height: 85px;
   border-bottom: 1px solid #E5E5E5;
@@ -62,6 +69,8 @@ ion-list {
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
+  color: #64748B;
+
 
 }
 
@@ -89,7 +98,7 @@ img {
 
 .title-description, .center-text{
   margin: auto;
-  text-align: center!important;
+  text-align: left!important;
 }
 
 

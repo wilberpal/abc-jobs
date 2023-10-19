@@ -3,11 +3,42 @@
   padding: 0 20px;
   margin-top: 70px;
 }
-.title-description, .center-text{
-  margin: auto;
-  text-align: center!important;
+ .center-text{
+  margin-left: 0!important;
+  margin-right: 0;
+  padding: 0;
+}
+.title-description{
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-weight: 600;
+  size: 28px;
+  line-height: 42px;
+  text-align: left;
+  font-size: 22px;
+  margin-bottom: 0;
 }
 
+.button-back-2 {
+
+  img{
+    width: 48px;
+    height: 48px;
+  }
+
+}
+
+.text-description{
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
+  color: #64748B;
+
+}
 
 
 .object-button{
@@ -20,18 +51,31 @@
 
     }
   }
+.container-ball{
+  position: relative;
+  height: 30px;
+}
 
   .ball {
     width: 20px;
     height: 20px;
-    display: flex;
-    margin: auto;
     border-radius: 50px;
     border: 5px solid #ffff;
+    position: absolute;
+    top: -30px;
+    right: 60px;
   }
 
   .text-description{
-    margin-top: 20px;
+    margin-top: 5px;
     text-align: justify;
-    padding: 5px 20px;
+    padding: 5px 15px;
+    p:first-child{
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    a:first-child{
+      font-weight: 600;
+      margin-bottom: 0;
+    }
   }

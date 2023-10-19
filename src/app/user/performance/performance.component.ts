@@ -6,8 +6,8 @@ import { ModalController } from '@ionic/angular';
   templateUrl: './performance.component.html',
   styleUrls: ['./performance.component.scss'],
 })
-export class PerformanceComponent  implements OnInit {
-
+export class PerformanceComponent implements OnInit {
+  modeScreen: string = ""
   prueba = {
     name: 'Alimentos S.A.S',
     author: 'Franz Joseph',
@@ -19,7 +19,10 @@ export class PerformanceComponent  implements OnInit {
   constructor(private modalCtrl: ModalController) { }
 
 
-  ngOnInit() {}
+  ngOnInit() {
+    const Mode = localStorage.getItem('DarkMode') || 'light';
+    this.modeScreen = Mode;
+  }
 
   closeModal() {
     this.modalCtrl.dismiss();
@@ -35,11 +38,11 @@ export class PerformanceComponent  implements OnInit {
 
   }
 
-  isNombreEmpty(value:string): boolean {
+  isNombreEmpty(value: string): boolean {
     return !value.trim();
   }
 
-  createNewProject(){
+  createNewProject() {
     this.modalCtrl.dismiss(this.prueba);
   }
 }
