@@ -9,7 +9,7 @@
       <div class="input-form">
         <ion-item class="css-input">
           <ion-icon name="search-sharp"></ion-icon>
-          <ion-input autocomplete="no-autocomplete" placeholder='{{"user.common.word.search" | translate | titlecase}}' [(ngModel)]="searchInput"
+          <ion-input autocomplete="no-autocomplete" placeholder='{{"user.common.word.search" | translate | titlecase}} {{"user.common.word.interview" | translate | lowercase}}' [(ngModel)]="searchInput"
             (keyup)="filterList()"></ion-input>
         </ion-item>
       </div>

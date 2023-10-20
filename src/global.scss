@@ -82,9 +82,26 @@ body.dark {
     color: #ffff !important;
   }
 
+  ion-input:focus{
+    color: #017DA5 !important;
+  }
+
+
+
   ion-icon{
       color: #ddd!important;
   }
+}
+
+.input-error {
+  --highlight-color-focused: red;
+  --highlight-color-invalid: red;
+  --highlight-height: 2px;
+  color: red;
+
+}
+.input-warning{
+  border:1px solid red !important;
 }
 
 ion-col.dark {
@@ -143,7 +160,7 @@ ion-header{
   max-width: 319px;
   width: 100%;
   border: 1px solid #E2E8F0;
-  border-radius: 24px;
+  border-radius: 34px;
   font-weight: 500;
 }
 
@@ -219,7 +236,7 @@ ion-item {
 
 .title-description {
   font-family: 'Poppins', 'Open Sans', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 25px;
   text-align: left;
   font-size: 25px;

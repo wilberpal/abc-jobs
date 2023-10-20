@@ -24,10 +24,13 @@
   "form.data.name":"Nombre completo",
   "form.data.enterprise":"Nombre Empresa",
   "form.data.enterprise.type":"Tipo Empresa",
-  "form.data.phone":"Telefono",
+  "form.data.phone":"Teléfono",
+  "form.data.number":"número",
+  "form.data.phone.long":"Número de teléfono",
   "form.data.address":"Dirección",
   "form.data.sector":"sector",
-  "form.data.email":"Correo electronico",
+  "form.data.email":"Correo electrónico",
+  "form.data.email-short":"Correo",
   "form.data.password":"Contraseña",
   "form.data.password.verify":"Confirmar contraseña",
   "button.data.sign":"Registrarse",
@@ -38,12 +41,15 @@
   "common.location.ask":"Dónde te encuentras",
   "common.location.select": "Selecciona tu ubicacion actual",
   "common.button.continue": "Continuar",
-  "common.button.next": "Continuar",
+  "common.button.next": "Siguiente",
   "common.verify.identity.title": "Verifica tu identidad",
-  "common.verify.identity.text":"Tu identidad te ayuda a descubiri nuevas personas y nuevas oportunidades",
+  "common.verify.identity.button": "Verificar",
+  "common.verify.identity.text":"Tu identidad te ayuda a descubrir nuevas personas y oportunidades",
   "common.verify.identity.span":"Veirfica la cuenta con tu ",
   "common.verify.otp.title":"Verificación OTP",
-  "common.verify.otp.text":"Por favor, ingresa el código de verificación",
+  "common.verify.otp.text":"Por favor, ingresa el código de verificación que enviamos al",
+  "common.verify.otp.code":"Reenviar el código en",
+  "common.verify.otp.not.verified": "Reenviar el código ahora",
   "common.verify.success.title":"Tu cuenta ha sido creada",
   "common.verify.success.text":"Vamos por tu trabajo de ensueño",
   "common.verify.lets.go":"Vamos",
@@ -78,6 +84,7 @@
   ,"user.common.word.morning":"good morning"
   ,"user.common.word.search":"buscar"
   ,"user.common.word.jobs":"trabajo"
+  ,"user.word.team":"Equipo"
   ,"user.common.word.recent":"Reciente"
   ,"user.common.word.recomended":"Recomendados"
   ,"user.common.word.home":"Inicio"
@@ -113,6 +120,8 @@
   ,"user.accesibility.span.letter":"Aumenta o disminuye el tamaño del texto"
   ,"user.accesibility.form.language":"Selecciona el idioma"
   ,"user.common.word.Results":"Resultados"
+  ,"span.error.email":"Correo no valido"
+  ,"span.error.phone":"Número de teléfono no valido"
 
 
  }

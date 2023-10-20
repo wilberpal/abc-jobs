@@ -24,9 +24,11 @@
   "form.data.enterprise":"Company Name",
   "form.data.enterprise.type":"Enterprise Type",
   "form.data.phone":"Phone",
+  "form.data.phone.long":"Phone number",
   "form.data.address":"Address",
   "form.data.sector":"sector",
   "form.data.email":"Email",
+  "form.data.email-short":"Email",
   "form.data.description":"Description",
   "form.data.date":"Date",
   "form.data.password":"Password",
@@ -37,12 +39,15 @@
   "common.location.ask":"Where you are",
   "common.location.select": "Select your current location",
   "common.button.continue": "Continue",
-  "common.button.next": "Continue",
+  "common.button.next": "Next",
+  "common.verify.identity.button": "Verify",
   "common.verify.identity.title": "Verify your identity",
   "common.verify.identity.text":"Your identity helps you discover new people and new opportunities",
   "common.verify.identity.span":"Verify the account with your ",
   "common.verify.otp.title":"OTP Verification",
   "common.verify.otp.text":"Please enter the verification code",
+  "common.verify.otp.code":"Re-send the code in",
+  "common.verify.otp.not.verified": "Re-send the code now",
   "common.verify.success.title":"Your account has been created",
   "common.verify.success.text":"Let's go get your dream job",
   "common.verify.lets.go":"Let's go",
@@ -70,6 +75,7 @@
   ,"user.common.word.institution":"Institution"
   ,"user.common.word.degree":"Degree obtained"
   ,"user.common.word.carreer":"Type of study"
+  ,"user.word.team":"Team"
   ,"user.academic.data":"Academic Data"
   ,"user.academic.data.text":"Enter your academic data"
   ,"user.technical.knowledge.data":"Technical Knowledge"
@@ -112,5 +118,6 @@
   ,"user.accesibility.night":"Night"
   ,"user.accesibility.span.letter":"Increase or decrease the size of the text"
   ,"user.accesibility.form.language":"Select the language"
-
+  ,"span.error.email":"Invalid email"
+  ,"span.error.phone":"Invalid phone number"
  }
