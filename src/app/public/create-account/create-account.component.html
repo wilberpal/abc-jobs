@@ -21,6 +21,9 @@
           <ion-input  autocomplete="no-autocomplete" #Name="ngModel" [(ngModel)]="userName" placeholder="{{'form.data.name' | translate}}"></ion-input>
         </ion-item>
       </div>
+      <div class="center-text">
+        <ion-span *ngIf="!isnameValid(userName) && Name.touched" class="text-error">{{"span.error.name" | translate}}*</ion-span>
+      </div>
 
       <div class="input-form">
         <ion-item class="css-input" [class.input-error]="!isPhoneValid(phone) && Phone.touched"
@@ -29,6 +32,9 @@
           <ion-input autocomplete="no-autocomplete" #Phone="ngModel" [(ngModel)]="phone" placeholder="{{'form.data.phone' | translate}}" type=number></ion-input>
         </ion-item>
       </div>
+      <div class="center-text">
+        <ion-span *ngIf="!isPhoneValid(phone) && Phone.touched" class="text-error">{{"span.error.phone" | translate}}*</ion-span>
+      </div>
 
       <div class="input-form">
         <ion-item class="css-input" [class.input-error]="!isEmailValid(email) && Email.touched"
@@ -36,6 +42,9 @@
             <ion-icon [class.warning-icon]="!isEmailValid(email) && Email.touched" name="mail-outline" slot="start"></ion-icon>
             <ion-input autocomplete="no-autocomplete" [(ngModel)]="email" #Email="ngModel" placeholder="{{'form.data.email' | translate}}"></ion-input>
         </ion-item>
+      </div>
+      <div class="center-text">
+        <ion-span *ngIf="!isEmailValid(email) && Email.touched" class="text-error">{{"span.error.email" | translate}}*</ion-span>
       </div>
 
       <div class="input-form">
@@ -50,6 +59,10 @@
         </ion-item>
       </div>
 
+      <div class="center-text">
+        <ion-span *ngIf="!isPasswordValid(password) && pass.touched" class="text-error">{{"span.error.password" | translate}}*</ion-span>
+      </div>
+
       <div class="input-form">
         <ion-item class="css-input"  [class.input-error]="confirmPassword != password && confirm.touched"
         [ngClass]="{'input-warning': confirmPassword != password && confirm.touched}">
@@ -60,6 +73,10 @@
             (click)="confirmarContrasena = !confirmarContrasena">
           </ion-icon>
         </ion-item>
+      </div>
+
+      <div class="center-text">
+        <ion-span *ngIf="confirmPassword != password && confirm.touched" class="text-error">{{"span.error.password.confirm" | translate}}*</ion-span>
       </div>
 
       <div class="button">

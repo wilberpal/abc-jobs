@@ -59,8 +59,23 @@
   margin-top: -15px;
 }
 
+
+
 .footer{
   display: flex;
   margin: auto;
   justify-content: space-between;
+}
+
+
+
+
+@media (min-width: 765px) {
+  .title-description {
+    p{
+      display: flex;
+      margin: auto;
+      text-align: center;
+    }
+  }
 }

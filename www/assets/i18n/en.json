@@ -120,4 +120,12 @@
   ,"user.accesibility.form.language":"Select the language"
   ,"span.error.email":"Invalid email"
   ,"span.error.phone":"Invalid phone number"
+  ,"span.error.name":"Invalid name"
+  ,"span.error.password":"Invalid password"
+  ,"span.error.password.confirm":"Password are not same"
+  ,"span.error.password.digits":"Password needs to have 8 characters."
+  ,"span.error.password.mayus":"Password must to have 1 capital letter"
+  ,"span.error.password.minus":"Password must to have 1 lower case letter"
+  ,"span.error.password.number":"Password must to have 1 number"
+  ,"span.error.password.special":"Password must to have 1 special character"
  }

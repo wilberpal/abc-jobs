@@ -74,12 +74,12 @@
       </svg>
 
     </div>
-    <div class="title-description" style="margin-left:0;">
+    <div class="title-description">
       <p>
         {{"common.presentation.title.p4" | translate}}
       </p>
     </div>
-    <div class="text-description finish-text" style="text-align:left">
+    <div class="text-description finish-text">
       {{"common.presentation.text.p4" | translate}}
     </div>
     <div class="cards">
@@ -87,6 +87,9 @@
         (click)="sendToJob()"></app-job-card>
       <app-job-card [title]='"card.job.title.option.2"' [text]='"card.job.text.option.2"' [option]="2"
         (click)="sendToEnterprise()"></app-job-card>
+      <div class="box-login">
+        <a (click)="sendToLogin()" class="login">{{"login.user.title" |translate}}</a>
+      </div>
     </div>
   </div>
   <div class="footer">

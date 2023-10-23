@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
   login() {
     let data =
     {
-      username: this.userName,
+      email: this.userName,
       password: this.password
     }
     this.loginService.login(data)

@@ -87,6 +87,21 @@ body.dark {
   }
 }
 
+.box-login{
+  width: 80%;
+  text-align: center;
+}
+
+.login{
+  text-align: center;
+  color: rgb(68, 68, 244);
+  font-weight: 500;
+  position: fixed;
+  bottom: 20px;
+  margin: auto;
+  cursor: pointer;
+}
+
 ion-col.dark {
   --ion-background-color: #222;
     --ion-text-color: #ddd;
@@ -166,6 +181,33 @@ ion-modal.custom-modal-2 {
   --border-radius: 22px 22px 0 0;
   position: absolute !important;
   align-items: end;
+}
+
+.input-error {
+  --highlight-color-focused: red;
+  --highlight-color-invalid: red;
+  --highlight-height: 2px;
+  color: red;
+
+}
+
+.text-error{
+  color: red;
+  font-size: 11px;
+
+}
+.input-warning{
+  border:1px solid red !important;
+}
+
+.center-text{
+  text-align: center;
+}
+
+.warning-icon {
+  color: red!important;
+  font-size: 1.2em;
+  margin-left: 5px;
 }
 
 

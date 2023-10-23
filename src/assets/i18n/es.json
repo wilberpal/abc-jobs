@@ -19,6 +19,7 @@
   "login.user.forgot.password.text":"Por favor ingrese el correo elctrónico asociado a su cuenta",
   "login.user.forgot.password.send":"Enviar correo",
   "signup.account.create":"Crear una cuenta",
+
   "signup.account.enterprise.create":"Continua con la información de la empresa",
   "signup.account.create.form":"Por favor, llena el formulario de registro a continuacion",
   "form.data.name":"Nombre completo",
@@ -124,6 +125,14 @@
   ,"user.common.word.Results":"Resultados"
   ,"span.error.email":"Correo no valido"
   ,"span.error.phone":"Número de teléfono no valido"
+  ,"span.error.name":"El nombre no es valido"
+  ,"span.error.password":"Contraseña no valida"
+  ,"span.error.password.confirm":"las contraseñas no coinciden"
+  ,"span.error.password.digits":"la contraseña debe tener al menos 8 digitos"
+  ,"span.error.password.mayus":"la contraseña debe tener al menos 1 letra en mayuscula"
+  ,"span.error.password.minus":"la contraseña debe tener al menos 1 letra en minuscula"
+  ,"span.error.password.number":"la contraseña debe tener al menos 1 numero"
+  ,"span.error.password.special":"la contraseña debe tener al menos 1 caracter especial"
 
 
  }

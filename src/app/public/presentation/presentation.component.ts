@@ -54,5 +54,8 @@ export class PresentationComponent implements OnInit {
   sendToEnterprise() {
     this.router.navigate(['/signup-enterprise']);
   }
+  sendToLogin() {
+    this.router.navigate(['/login']);
+  }
 
 }

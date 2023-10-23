@@ -26,7 +26,10 @@ export class LoginService {
 
 
   login(data: any) {
-    return this.http.post(`${this.env.URI_2}/${this.env.argumentUser}/${this.env.argumentSignUp}/${this.env.argumentLogin}`, data).pipe(
+    let json = JSON.parse('"json"')
+    let headers = this.getHeader();
+    const options =  {responseType: json, headers: headers};
+    return this.http.post(`${this.env.URI_2}/${this.env.argumentUser}/${this.env.argumentSignUp}/${this.env.argumentLogin}`, data, options).pipe(
       catchError(this.handleError),
       map((response: any) => response)
     )
