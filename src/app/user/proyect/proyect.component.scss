@@ -1,26 +1,22 @@
 .title-description {
   text-align: center;
   margin: auto;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .content {
   height: 55vh;
   overflow-y: scroll;
-  padding-left: 15px;
 }
 
 .letter {
-  margin: 8px 10px;
+  margin: 10px 10px;
   background-color: #017DA5;
   border-radius: 9px;
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: bolder;
   color: #ffff;
-  height: 60px;
-  width: 55px;
-  margin: auto;
-  padding: 0 10px 15px 12px;
+  height: 65px;
 }
 
 .container-ball {
@@ -41,9 +37,7 @@
 .item-list {
   height: 90px;
   border-bottom:1px solid #E5E5E5;
-  width: 100%;
 }
-
 
 .titleName {
   margin: 0;
@@ -53,7 +47,7 @@
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  margin-top: 10px;
+
 }
 
 .text-description {
@@ -85,11 +79,6 @@ min-width: 350px!important;
 .floor-menu{
   position: absolute;
   bottom: 0;
-}
-
-ion-icon{
-  margin-right: 12px;
-  color: black;
 }
 
 ion-modal{

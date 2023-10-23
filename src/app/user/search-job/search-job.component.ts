@@ -4,27 +4,27 @@ import { TranslateService } from '@ngx-translate/core';
 
 const dummy=[{
   nombre:"Diseñador",
-  icon:"assets/image/Designer.svg"
+  icon:"color-palette-outline"
 },
 {
   nombre:"Desarrollador",
-  icon:"assets/image/Development.svg"
+  icon:"terminal-outline"
 },
 {
   nombre:"Marketing",
-  icon:"assets/image/Marketing.svg"
+  icon:"megaphone-outline"
 },
 {
   nombre:"Administración",
-  icon:"assets/image/Management.svg"
+  icon:"cog-outline"
 },
 {
   nombre:"Investigación",
-  icon:"assets/image/Research.svg"
+  icon:"stats-chart-outline"
 },
 {
   nombre:"IT",
-  icon:"assets/image/IT.svg"
+  icon:"tv-outline"
 },];
 
 @Component({

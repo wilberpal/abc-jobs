@@ -36,19 +36,6 @@ body.dark {
     --ion-background-color: #222;
     --ion-text-color: #ddd;
   }
-
-  ion-checkbox{
-    border: 1px solid white;
-    --size: 15px;
-    border-radius: 10px;
-  }
-
-  .container-card{
-    --ion-background-color: #222;
-    --ion-text-color: #ddd;
-    box-shadow: 0px 10px 26px 5px #ffffff26;
-
-  }
   .text{
     color: #ddd;
 
@@ -72,7 +59,7 @@ body.dark {
   }
 
   .card-job{
-    box-shadow: -3px 5px 15px 0px rgba(255, 255, 255, 0.297);
+    box-shadow: -3px 5px 10px -6px rgba(255,255,255,1);
     .p-head, .p-body{
       color: #ddd;
     }
@@ -82,26 +69,9 @@ body.dark {
     color: #ffff !important;
   }
 
-  ion-input:focus{
-    color: #017DA5 !important;
-  }
-
-
-
   ion-icon{
       color: #ddd!important;
   }
-}
-
-.input-error {
-  --highlight-color-focused: red;
-  --highlight-color-invalid: red;
-  --highlight-height: 2px;
-  color: red;
-
-}
-.input-warning{
-  border:1px solid red !important;
 }
 
 ion-col.dark {
@@ -127,10 +97,9 @@ ion-icon.dark {
   background: #017DA5;
   border: none;
   border-radius: 50px;
-  width: 100%;
-  max-width: 319px;
-  height: 64px;
-  font-size: 16px;
+  width: 94%;
+  height: 60px;
+  font-size: 22px;
 
 }
 
@@ -150,21 +119,17 @@ ion-header{
 
 .css-input {
   font-size: 16px;
-  color: #6b7583;
+  color: #323232;
   box-shadow: -9px 0px 0px rgba(66, 66, 66, .0);
   text-shadow: 0px 0px 2px rgba(66, 66, 66, .50);
   display: flex;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   height: 64px;
-  max-width: 319px;
-  width: 100%;
+  width: 94%;
   border: 1px solid #E2E8F0;
-  border-radius: 34px;
-  font-weight: 500;
+  border-radius: 24px;
 }
-
-ion-input{}
 
 ion-modal.custom-web{
   --border-radius: 22px;
@@ -186,7 +151,7 @@ ion-modal.custom-modal-2 {
 }
 
 
-.css-input:focus {
+.css-input::before {
   border: 1px solid #4640DE;
   ;
 }
@@ -236,7 +201,7 @@ ion-item {
 
 .title-description {
   font-family: 'Poppins', 'Open Sans', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 25px;
   text-align: left;
   font-size: 25px;
