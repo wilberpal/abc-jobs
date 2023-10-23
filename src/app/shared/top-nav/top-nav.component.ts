@@ -23,12 +23,6 @@ export class TopNavComponent  implements OnInit {
     return await modal.present();
   }
 
-  desktop():boolean{
-    if (this.platform.is('desktop')) {
-      return true
-   } else {
-    return false
-   }
-  }
+
 
 }

@@ -11,9 +11,7 @@ import { ApplicantsComponent } from './applicants/applicants.component';
 import { TestDetailsComponent } from './test/test-details/test-details.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
-import { ProjecteWebComponent } from './projecte-web/projecte-web.component';
-import { InterviewWebComponent } from './interview-web/interview-web.component';
-import { ApplicantsWebComponent } from './applicants-web/applicants-web.component';
+
 
 
 const routes: Routes = [
@@ -33,10 +31,7 @@ const routes: Routes = [
     path: 'project',
     component: ProyectComponent,
   },
-  {
-    path: 'web/projects',
-    component: ProjecteWebComponent,
-  },
+
   {
     path: 'project/detail',
     component: ProjectDetailComponent,
@@ -45,10 +40,7 @@ const routes: Routes = [
     path: 'interview',
     component: TestComponent,
   },
-  {
-    path: 'web/interview',
-    component: InterviewWebComponent,
-  },
+
   {
     path: 'ability',
     component: AbilityComponent,
@@ -57,10 +49,7 @@ const routes: Routes = [
     path: 'applicant',
     component: ApplicantsComponent,
   },
-  {
-    path: 'web/applicant',
-    component: ApplicantsWebComponent,
-  },
+
   {
     path: 'profile',
     component: ProfileComponent,

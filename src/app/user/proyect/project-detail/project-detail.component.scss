@@ -23,9 +23,13 @@ ion-list {
   border-radius: 50px;
 }
 
+.container{
+  margin-left: 20px;
+
+}
 
 .button-back-2 {
-  margin-top: -10px;
+  margin-top: 15px;
   margin-left: 5px;
   img{
     width: 48px;
@@ -35,7 +39,15 @@ ion-list {
 }
 .item-list {
   height: 85px;
-  border-bottom: 1px solid #E5E5E5;
+}
+
+.hyperlink{
+  color: #017DA5!important;
+  text-decoration: underline;
+  font-weight: 500!important;
+  margin-bottom: 20px!important;
+
+
 }
 
 .option-button{
@@ -63,9 +75,10 @@ ion-list {
 
 .text-description {
   margin: 0;
+  margin-right: 20px!important;
   font-family: 'Poppins', 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
@@ -83,22 +96,43 @@ ion-footer{
 .item-text{
   width: 80px;
   max-width: 80px;
+  margin-left: 0!important;
+  padding: 0;
 }
 
 img {
   display: flex;
-  margin: auto;
-  width: 40px;
-  height: 40px;
+  margin: auto 0;
+  width: 58px;
+  height: 58px;
   border-radius: 100px;
   border: 0px;
-  margin-top: 10px;
+  margin-top: 0px;
+}
+
+.text-list{
+  font-size: 16px;
+  p{font-size: 12px;}
 }
 
 
+ion-list{
+  margin-left: -20px!important;
+  padding: 0!important;
+  width: 93.5vw;
+  margin-right: 0;
+}
+
+
+.title-description{
+  font-size: 22px;
+}
+
 .title-description, .center-text{
   margin: auto;
+  margin-bottom: 10px;
   text-align: left!important;
+  line-height: 24px;
 }
 
 

@@ -9,6 +9,12 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./presentation.component.scss'],
 })
 export class PresentationComponent implements OnInit {
+  presentation={
+    first:"assets/image/image (9).png",
+    second:"assets/image/Group 32.png",
+    third:"assets/image/onb3 (1).png",
+    logo:"assets/image/logo.png",
+  }
   step: number;
   modeScreen:string=""
   constructor(private platform: Platform,
@@ -27,11 +33,6 @@ export class PresentationComponent implements OnInit {
     if(Mode === 'dark'){
       document.body.classList.toggle('dark', true);
     }
-    if (this.platform.is('desktop')) {
-      this.router.navigate(['/index']);
-   } else {
-      this.router.navigate(['/']);
-   }
   }
 
   next() {

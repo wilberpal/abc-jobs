@@ -11,7 +11,7 @@
 
 .title-description{
   font-family: 'Poppins', 'Open Sans', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   size: 28px;
   line-height: 42px;
   text-align: left;
@@ -34,7 +34,7 @@
 }
 
 .button-back-2 {
-  margin-top: 20px;
+  margin-top: 35px;
   margin-left: 20px;
   img{
     width: 48px;
@@ -46,15 +46,22 @@
 .align-row{
   margin: 10px 10px;
 }
-
+.css-input{
+  margin-bottom: 20px!important;
+}
 .input-form{
   width: 85%;
   margin:auto ;
 }
 
 .button{
-  width: 85%;
+  width: 319px;
+  display: flex;
   margin: auto;
+  margin-top: 15px;
+  button{
+    margin: auto;
+  }
 }
 
 .input-error {

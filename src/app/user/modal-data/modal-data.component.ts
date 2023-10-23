@@ -34,7 +34,7 @@ export class ModalDataComponent  implements OnInit {
   };
   language = {
     name: '',
-    level: '',
+    experience: '',
 
   };
 
@@ -68,7 +68,7 @@ export class ModalDataComponent  implements OnInit {
 
   }
   camposCompletosLanguage(): boolean {
-    if (this.language.name && this.language.level) {
+    if (this.language.name && this.language.experience) {
       return true
     }
     else {
@@ -100,6 +100,7 @@ export class ModalDataComponent  implements OnInit {
   }
 
   createNewAcademicInformation(){
+
     this.modalCtrl.dismiss(this.academic);
   }
   createLanguageInformation(){

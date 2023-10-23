@@ -1,6 +1,7 @@
 .title-description {
   text-align: center;
   margin: auto;
+  margin-bottom: 35px;
 }
 
 ion-list {
@@ -28,7 +29,6 @@ ion-list {
 
 .item-list {
   height: 85px;
-  border-bottom: 1px solid #E5E5E5;
 }
 
 .option-button{
@@ -37,7 +37,7 @@ ion-list {
   font-family: 'Poppins', 'Open Sans', sans-serif;
   max-width: 87px;
   background-color: #017DA5;
-  border-left: 2px solid #ffff;
+  border-left: 1px solid #ffff;
   text-align: center;
 }
 
@@ -77,14 +77,20 @@ ion-footer{
   max-width: 80px;
 }
 
+.text-list{
+  font-size: 16px;
+  p{
+    font-size: 12px;
+  }
+}
+
 img {
   display: flex;
   margin: auto;
-  width: 40px;
-  height: 40px;
+  width: 58px;
+  height: 58px;
   border-radius: 100px;
   border: 0px;
-  margin-top: 10px;
 }
 
 

@@ -15,41 +15,46 @@
         {{"signup.account.create.form" | translate}}
       </div>
       <div class="input-form">
-        <ion-item class="css-input">
+        <ion-item class="css-input" [class.input-error]="!isnameValid(userName) && Name.touched"
+          [ngClass]="{'input-warning': !isnameValid(userName) && Name.touched}">
+          <ion-icon name="person-outline" slot="start" [class.warning-icon]="!isnameValid(userName) && Name.touched"></ion-icon>
+          <ion-input  autocomplete="no-autocomplete" #Name="ngModel" [(ngModel)]="userName" placeholder="{{'form.data.name' | translate}}"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-form">
+        <ion-item class="css-input" [class.input-error]="!isPhoneValid(phone) && Phone.touched"
+          [ngClass]="{'input-warning': !isPhoneValid(phone) && Phone.touched}">
           <ion-icon name="person-outline" slot="start"></ion-icon>
-          <ion-input  autocomplete="no-autocomplete" placeholder="{{'form.data.name' | translate}}"></ion-input>
+          <ion-input autocomplete="no-autocomplete" #Phone="ngModel" [(ngModel)]="phone" placeholder="{{'form.data.phone' | translate}}" type=number></ion-input>
         </ion-item>
       </div>
 
       <div class="input-form">
-        <ion-item class="css-input">
-          <ion-icon name="person-outline" slot="start"></ion-icon>
-          <ion-input autocomplete="no-autocomplete" placeholder="{{'form.data.phone' | translate}}"></ion-input>
+        <ion-item class="css-input" [class.input-error]="!isEmailValid(email) && Email.touched"
+          [ngClass]="{'input-warning': !isEmailValid(email) && Email.touched}">
+            <ion-icon [class.warning-icon]="!isEmailValid(email) && Email.touched" name="mail-outline" slot="start"></ion-icon>
+            <ion-input autocomplete="no-autocomplete" [(ngModel)]="email" #Email="ngModel" placeholder="{{'form.data.email' | translate}}"></ion-input>
         </ion-item>
       </div>
 
       <div class="input-form">
-        <ion-item class="css-input">
-          <ion-icon name="mail-outline" slot="start"></ion-icon>
-          <ion-input autocomplete="no-autocomplete" placeholder="{{'form.data.email' | translate}}"></ion-input>
-        </ion-item>
-      </div>
-
-      <div class="input-form">
-        <ion-item class="css-input">
-          <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
-          <ion-input autocomplete="no-autocomplete" placeholder="{{'form.data.password' | translate}}"
+        <ion-item class="css-input" [class.input-error]="!isPasswordValid(password) && pass.touched"
+          [ngClass]="{'input-warning': !isPasswordValid(password) && pass.touched}">
+            <ion-icon [class.warning-icon]="!isPasswordValid(password) && pass.touched" name="lock-closed-outline" slot="start"></ion-icon>
+            <ion-input autocomplete="false" #pass="ngModel" [(ngModel)]="password"  placeholder="{{'form.data.password' | translate}}"
             [type]="mostrarContrasena ? 'text' : 'password'"></ion-input>
-          <ion-icon slot="end" name="{{mostrarContrasena ? 'eye-off' : 'eye'}}"
+          <ion-icon class="icon-eye" slot="end" name="{{mostrarContrasena ? 'eye-off' : 'eye'}}"
             (click)="mostrarContrasena = !mostrarContrasena">
           </ion-icon>
         </ion-item>
       </div>
 
       <div class="input-form">
-        <ion-item class="css-input">
-          <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
-          <ion-input autocomplete="no-autocomplete" placeholder="{{'form.data.password.verify' | translate}}"
+        <ion-item class="css-input"  [class.input-error]="confirmPassword != password && confirm.touched"
+        [ngClass]="{'input-warning': confirmPassword != password && confirm.touched}">
+          <ion-icon [class.warning-icon]="confirmPassword != password && confirm.touched" name="lock-closed-outline" slot="start"></ion-icon>
+          <ion-input autocomplete="no-autocomplete" #confirm="ngModel" [(ngModel)]="confirmPassword" placeholder="{{'form.data.password.verify' | translate}}"
             [type]="confirmarContrasena ? 'text' : 'password'"></ion-input>
           <ion-icon slot="end" name="{{confirmarContrasena ? 'eye-off' : 'eye'}}"
             (click)="confirmarContrasena = !confirmarContrasena">
@@ -58,7 +63,8 @@
       </div>
 
       <div class="button">
-        <button (click)="sendToEnterprise()" class="btn btn-primary">{{"button.data.sign" | translate}}</button>
+        <button (click)="signUp()"
+        [disabled]="!isEmailValid(email) || !isPasswordValid(password) || !isPhoneValid(phone) || !isnameValid(userName) || confirmPassword != password" class="btn btn-primary">{{"button.data.sign" | translate}}</button>
       </div>
       <div class="text-span">
         <a >{{"span.Terms.conditions" | translate}}</a>

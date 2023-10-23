@@ -3,9 +3,9 @@
     <div class="spinner" data-percentage="60">
         <svg class="spinner-circle" viewBox="0 0 32 32">
             <circle class="spinner-background" cx="16" cy="16" r="14" ></circle>
-            <circle class="spinner-foreground" [ngStyle]="{'stroke-dashoffset': calculateStrokeOffset(item.level)}" cx="16" cy="16" r="14" ></circle>
+            <circle class="spinner-foreground" [ngStyle]="{'stroke-dashoffset': calculateStrokeOffset(item.value)}" cx="16" cy="16" r="14" ></circle>
         </svg>
-        <div class="spinner-percentage">{{item.level}}%</div>
+        <div class="spinner-percentage">{{item.value}}%</div>
     </div>
 </div>
 <p class="title-description">

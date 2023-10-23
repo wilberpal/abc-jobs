@@ -14,23 +14,23 @@ export class ProfileComponent  implements OnInit {
   items: any = [
     {
       name: "PHP",
-      level: 86
+      value: 86
     },
     {
       name: "Java",
-      level: 48
+      value: 48
     },
     {
       name: "MySQL",
-      level: 56
+      value: 56
     },
     {
       name: "React N",
-      level: 34
+      value: 34
     },
     {
       name: "CSS",
-      level: 75
+      value: 75
     },
   ]
 
@@ -127,6 +127,11 @@ export class ProfileComponent  implements OnInit {
       }
     });
 
+    modal.onDidDismiss().then((dataReturned) => {
+      if (dataReturned !== null && dataReturned.data) {
+        this.skills.studies.push(dataReturned.data);
+      }
+  });
     return await modal.present();
   }
 
@@ -141,6 +146,12 @@ export class ProfileComponent  implements OnInit {
       }
     });
 
+    modal.onDidDismiss().then((dataReturned) => {
+      if (dataReturned !== null && dataReturned.data) {
+        this.skills.works.push(dataReturned.data);
+      }
+  });
+
     return await modal.present();
   }
   async skillsModal() {
@@ -153,20 +164,30 @@ export class ProfileComponent  implements OnInit {
         description: "user.technical.knowledge.data.text"
       }
     });
-
+    modal.onDidDismiss().then((dataReturned) => {
+      if (dataReturned !== null && dataReturned.data) {
+        this.items.push(dataReturned.data);
+      }
+  });
     return await modal.present();
   }
 
   async languageModal() {
     const modal = await this.modalCtrl.create({
       component: ModalDataComponent,
-      cssClass: 'custom-modal-2', // Aplica la clase CSS personalizada al modal
+      cssClass: 'custom-modal-2',
       componentProps: {
         option: 3,
         title: "user.languages",
         description: "user.languages.select"
       }
     });
+
+    modal.onDidDismiss().then((dataReturned) => {
+      if (dataReturned !== null && dataReturned.data) {
+        this.skills.Languages.push(dataReturned.data);
+      }
+  });
 
     return await modal.present();
   }

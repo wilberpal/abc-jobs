@@ -1,4 +1,3 @@
-import { InterviewWebComponent } from './interview-web/interview-web.component';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
@@ -24,8 +23,6 @@ import { HomeComponent } from './home/home.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { ProjecteWebComponent } from './projecte-web/projecte-web.component';
-import { ApplicantsWebComponent } from './applicants-web/applicants-web.component';
 import { SidebarComponent } from 'android/user/sidebar/sidebar.component';
 
 
@@ -47,9 +44,7 @@ import { SidebarComponent } from 'android/user/sidebar/sidebar.component';
     ProfileComponent,
     ModalDataComponent,
     HomeComponent,
-    ProjecteWebComponent,
-    InterviewWebComponent,
-    ApplicantsWebComponent,
+
     SidebarComponent
 
 
